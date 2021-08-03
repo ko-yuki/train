@@ -1,0 +1,53 @@
+html, body, div, input, button {
+    margin: 0;
+    padding: 0;
+}
+input,button {
+    outline: none;
+}
+.box {
+    width: 1202px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+#barrage {
+    height: 600px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+#barrage span {
+    position: absolute;
+}
+#text {
+    display: block;
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+    text-indent: 10px;
+    border: 1px solid #333;
+}
+.control {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+button {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+#send {
+    color: salmon;
+    border: 1px solid salmon;
+}
+#clear {
+    color: grey;
+    border: 1px solid grey;
+}
+input,button {
+    border-radius: 4px;
+}
