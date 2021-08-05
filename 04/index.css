@@ -1,0 +1,128 @@
+main {
+    width: 100%;
+    min-height: 400px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination-bullet-active {
+    background-color: #E10000;
+}
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 36px 0 14px;
+}
+section ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 60px;
+    height: 280px;
+    background-color: #ddd;
+}
+section li {
+    text-align: center;
+}
+section img {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+section span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+article h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 33px 0 44px;
+}
+article ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+article li {
+    width: 595px;
+    height: 570px;
+    margin-bottom: 12px;
+}
+article img {
+    width: 100%;
+    height: 100%;
+}
+.text-tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 65px;
+}
+.text-tag h3 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 47px;
+    margin-bottom: 40px;
+}
+.text-tag p {
+    font-size: 20px;
+}
+.text-tag .ability {
+    font-weight: 600;
+    white-space:pre-wrap;
+}
+.ability::before {
+    content: "";
+    display: block;
+    width: 210px;
+    height: 2px;
+    background-color: #999;
+    margin: 0 auto 35px;
+}
+.news {
+    margin-bottom: 55px;
+}
+.news h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 112px;
+    margin-bottom: 10px;
+}
+.news-box {
+    display: flex;
+    justify-content: space-around;
+}
+.news-box dl {
+    width: 270px;
+}
+.news-box img {
+    width: 100%;
+    height: 200px;
+}
+.news-box span {
+    display: block;
+    line-height: 36px;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 4px;
+}
+.news-box p {
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

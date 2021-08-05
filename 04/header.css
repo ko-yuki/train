@@ -1,0 +1,24 @@
+.header-box {
+    background-color: #f2f2f2;
+}
+.wrapper-box, .logo-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper-box {
+    height: 80px;
+}
+.logo-box img {
+    margin-right: 10px;
+}
+.logo-box span {
+    font-size: 24px;
+}
+nav a {
+    font-size: 18px;
+    margin: 0 12px;
+}
+nav a:hover {
+    color: #F81A57;
+}
