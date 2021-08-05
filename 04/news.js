@@ -2,7 +2,7 @@
 let news = [];
 function getNews(page){
     axios({
-        url:"http://mock-api.com/rg1Mk4gY.mock/newslist",
+        url:"//mock-api.com/rg1Mk4gY.mock/newslist",
         params:{page},
         method:"get"
     })

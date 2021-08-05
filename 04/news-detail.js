@@ -6,7 +6,7 @@ function getParams(){
 }
 // 发送请求
 axios({
-    url:"http://mock-api.com/rg1Mk4gY.mock/details",
+    url:"//mock-api.com/rg1Mk4gY.mock/details",
     method:"get"
 })
 .then(res=>{    

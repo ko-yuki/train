@@ -20,7 +20,7 @@ let mySwiper = new Swiper ('.swiper-container', {
 // 数据请求
 // 产品介绍
 axios({
-    url:"http://mock-api.com/rg1Mk4gY.mock/products",
+    url:"//mock-api.com/rg1Mk4gY.mock/products",
     method:"get"
 })
 .then(res=>{
@@ -38,7 +38,7 @@ axios({
 })
 // 首页动态新闻
 axios({
-    url:"http://mock-api.com/rg1Mk4gY.mock/news",
+    url:"//mock-api.com/rg1Mk4gY.mock/news",
     method:"get"
 })
 .then(res=>{
