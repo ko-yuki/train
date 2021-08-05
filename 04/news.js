@@ -93,7 +93,6 @@ function changeStyle(page){
 // 需要传递新闻的编号
 $(".news-list").on("click","li",function(e){
     let index = $(this).index();
-    console.log(news[index].id)
     let url = encodeURI("news-detail.html?id="+news[index].id);
     location.href = url;
 })
