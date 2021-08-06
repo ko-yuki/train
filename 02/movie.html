@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Document</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./movie.css">
 </head>
@@ -12,7 +13,7 @@
     <!-- 头部 -->
     <header>
         <div>
-            <img src="./images/bird.png" alt="极客大叔的爱好">
+            <img data-src="./images/bird.png" alt="极客大叔的爱好" class="lazyload">
             <span>极客大叔的爱好</span>
         </div>
         <nav>
@@ -20,54 +21,96 @@
             <a href="#">喜欢的书</a>
             <a href="#">聊一聊</a>
         </nav>
+        <img data-src="./images/menu.png" alt="下拉菜单" class="menu lazyload">
     </header>
+    <nav class="sub-menu">
+        <p><a href="#">喜欢的电影</a></p>
+        <p><a href="#">喜欢的书</a></p>
+        <p><a href="#">聊一聊</a></p>
+    </nav>
     <!-- movies -->
     <h2>喜欢的电影</h2>
-    <ul class="movie">
-        <li>
-            <img src="./images/1.webp" alt="黑寡妇">
-            <span>黑寡妇</span>
-        </li>
-        <li>
-            <img src="./images/2.webp" alt="明日之战">
-            <span>明日之战</span>
-        </li>
-        <li>
-            <img src="./images/3.webp" alt="智齿">
-            <span>智齿</span>
-        </li>
-        <li>
-            <img src="./images/4.webp" alt="杀手妻子的保镖">
-            <span>杀手妻子的保镖</span>
-        </li>
-    </ul>
+    <div class="container wrapper">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="movies movies1">
+                    <img data-src="./images/1.webp" alt="黑寡妇" class="lazyload">
+                    <span>黑寡妇</span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="movies movies2">
+                    <img data-src="./images/2.webp" alt="明日之战" class="lazyload">
+                    <span>明日之战</span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="movies movies3">
+                    <img data-src="./images/3.webp" alt="智齿" class="lazyload">
+                    <span>智齿</span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="movies movies4">
+                    <img data-src="./images/4.webp" alt="杀手妻子的保镖" class="lazyload">
+                    <span>杀手妻子的保镖</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- books -->
     <h2>喜欢的书</h2>
-    <ul class="book">
-        <li>
-            <img src="./images/5.webp" alt="我要我们在一起">
-            <span>我要我们在一起</span>
-        </li>
-        <li>
-            <img src="./images/6.webp" alt="阳光姐妹淘">
-            <span>阳光姐妹淘</span>
-        </li>
-        <li>
-            <img src="./images/7.webp" alt="泰坦尼克号">
-            <span>泰坦尼克号</span>
-        </li>
-        <li>
-            <img src="./images/8.webp" alt="宝贝老板2">
-            <span>宝贝老板2</span>
-        </li>
-    </ul>
+    <div class="container wrapper">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="books books1">
+                    <img data-src="./images/5.webp" alt="我要我们在一起" class="lazyload">
+                    <span>我要我们在一起</span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="books books2">
+                    <img data-src="./images/6.webp" alt="阳光姐妹淘" class="lazyload">
+                    <span>阳光姐妹淘</span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="books books3">
+                    <img data-src="./images/7.webp" alt="泰坦尼克号" class="lazyload">
+                    <span>泰坦尼克号</span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="books books4">
+                    <img data-src="./images/8.webp" alt="宝贝老板2" class="lazyload">
+                    <span>宝贝老板2</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 底部 -->
     <footer>
-        <div>
-            <p>王小波说他是一只特立独行的猪，那我就当一只特立独行的鸟吧。交个朋友么，扫下右边的二维码</p>
-            <img src="./images/code.png" alt="交友二维码">
+        <div class="container">
+            <div class="row footer">
+                <div class="col-md-8">
+                    <p>王小波说他是一只特立独行的猪，那我就当一只特立独行的鸟吧。交个朋友么，扫下二维码吧</p>
+                </div>
+                <div class="col-md-4">
+                    <img data-src="./images/code.png" alt="交友二维码" class="lazyload">
+                </div>
+            </div>
         </div>
         <p>版权所有&copy;极客大叔</p>
     </footer>
 </body>
 </html>
+<script src="./lazysizes.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(".menu").on("click",function(){
+        let h = $(".sub-menu").height();
+        h = h==0?90:0;
+        $(".sub-menu").css("height",h);
+    })
+</script>
