@@ -127,6 +127,7 @@ footer>p {
     }
     .sub-menu {
         display: block;
+        height: 0;
     }
     .footer img {
         width: 210px;
