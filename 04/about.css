@@ -1,3 +1,13 @@
+html, .a-body {
+    height: 100%;
+}
+.a-body {
+    display: flex;
+    flex-direction: column;
+}
+.a-body main {
+    flex: 1;
+}
 .about h2 {
     text-align: center;
     font-size: 26px;
@@ -8,7 +18,7 @@
 .wrapper.about-box {
     display: flex;
     justify-content: space-between;
-    margin: 27px auto 29px;
+    margin: 20px auto;
 }
 #map {
     height: 283px;
