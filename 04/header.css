@@ -22,3 +22,42 @@ nav a {
 nav a:hover {
     color: #F81A57;
 }
+.sub-nav a:hover {
+    color: #F81A57;
+}
+.menu {
+    cursor: pointer;
+    border: 2px solid #000;
+    display: none;
+}
+.sub-nav {
+    height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    line-height: 24px;
+    transition: height 0.3s;
+}
+@media (min-width: 768px){
+    .sub-nav {
+        display: none;
+    }
+}
+@media (max-width: 768px),(max-width: 576px){
+    .container {
+        max-width: 100%;
+    }
+    .wrapper.wrapper-box {
+        width: 100%;
+        padding: 0 15px;
+    }
+    header nav {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .sub-nav {
+        display: block;
+        height: 0;
+    }
+}

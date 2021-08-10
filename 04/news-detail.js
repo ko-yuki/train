@@ -11,12 +11,18 @@ axios({
 })
 .then(res=>{    
     let detail = res.data.filter(item=>item.id==getParams())[0];
+    let w = $(".content img").width();
+    let u = detail.url.split(",");
     $(".title p").text(detail.title);
     $(".title span").text(detail.date);
-    $(".content img").attr({
-        src:detail.url,
-        alt:detail.text
-    });
+    if(w>=318){
+        $(".content img").attr("src",u[2]);
+    }else if(w>=180){
+        $(".content img").attr("src",u[1]);
+    }else {
+        $(".content img").attr("src",u[0]);
+    }
+    $(".content img").attr("alt",detail.text);
     $(".info").text(detail.info);
     $(".indc").text(detail.indc);
 })

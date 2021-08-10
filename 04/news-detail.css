@@ -26,18 +26,23 @@
     margin-right: 26px;
 }
 .content img {
-    width: 600px;
-    height: 884px;
+    width: 54%;
+    height: auto;
     margin: 0 auto;
 }
 .content p {
     font-size: 14px;
     line-height: 20px;
-    padding: 0 25px 0 22px;
 }
 .info {
     margin: 25px 0 17px;
 }
 .indc {
     margin-bottom: 28px;
+}
+
+@media (max-width: 576px){
+    .title p {
+        font-size: 22px;
+    }
 }

@@ -8,11 +8,17 @@ function getNews(page){
     })
     .then(res=>{
         news = res.data;
+        let w = $(".news-img img").eq(0).width();
         news.forEach((item,index)=>{
-            $(".news-img img").eq(index).attr({
-                src:item.url,
-                alt:item.text
-            });
+            let u = item.url.split(",");
+            if(w>=214){
+                $(".news-img img").eq(index).attr("src",u[2]);
+            }else if(w>=180){
+                $(".news-img img").eq(index).attr("src",u[1]);
+            }else {
+                $(".news-img img").eq(index).attr("src",u[0]);
+            }
+            $(".news-img img").eq(index).attr("alt",item.text);
             $(".news-text h4").eq(index).text(item.title);
             $(".news-text span").eq(index).text(item.date);
             $(".news-text p").eq(index).text(item.main);

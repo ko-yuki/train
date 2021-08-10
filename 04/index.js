@@ -16,7 +16,6 @@ let mySwiper = new Swiper ('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
 })
-
 // 数据请求
 // 产品介绍
 axios({
@@ -28,7 +27,7 @@ axios({
     let len = $(".img-tag").length;
     for(let i=0; i<len; i++){
         $(".img-tag img").eq(i).attr({
-            src:products[i].url,
+            "data-src":products[i].url,
             alt:products[i].text
         });
         $(".text-tag h3").eq(i).text(products[i].title);
@@ -46,7 +45,7 @@ axios({
     let len = $(".news-box dl").length;
     for(let i=0; i<len; i++){
         $(".news-box dl img").eq(i).attr({
-            src:news[i].url,
+            "data-src":news[i].url,
             alt:news[i].text
         });
         $(".news-box dl span").eq(i).text(news[i].title);

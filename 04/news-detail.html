@@ -11,15 +11,17 @@
     <header></header>
     <main>
         <div class="title">
-            <div class="title-box">
+            <div class="title-box container">
                 <p></p>
                 <span></span>
             </div>
         </div>
-        <div class="wrapper content">
-            <img src="" alt="">
-            <p class="info"></p>
-            <p class="indc"></p>
+        <div class="container">
+            <div class="wrapper content row">
+                <img src="" alt="" class="lazyload">
+                <p class="info col-12"></p>
+                <p class="indc col-12"></p>
+            </div>
         </div>
     </main>
     <footer></footer>
@@ -32,3 +34,4 @@
     $("footer").load("footer.html");
 </script>
 <script src="./news-detail.js"></script>
+<script src="./lazysizes.min.js"></script>

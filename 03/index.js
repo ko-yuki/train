@@ -42,6 +42,7 @@ $("#send").on("click",function(){
         this.remove();
     })
     num++;
+    $("#text").val("");
 })
 // 清屏
 $("#clear").on("click",function(){

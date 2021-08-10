@@ -17,21 +17,21 @@
             <span>极客大叔的爱好</span>
         </div>
         <nav>
-            <a href="#">喜欢的电影</a>
-            <a href="#">喜欢的书</a>
-            <a href="#">聊一聊</a>
+            <a href="#movie">喜欢的电影</a>
+            <a href="#book">喜欢的书</a>
+            <a href="#chat">聊一聊</a>
         </nav>
         <img data-src="./images/menu.png" alt="下拉菜单" class="menu lazyload">
     </header>
     <nav class="sub-menu">
-        <p><a href="#">喜欢的电影</a></p>
-        <p><a href="#">喜欢的书</a></p>
-        <p><a href="#">聊一聊</a></p>
+        <p><a href="#movie">喜欢的电影</a></p>
+        <p><a href="#book">喜欢的书</a></p>
+        <p><a href="#chat">聊一聊</a></p>
     </nav>
     <!-- movies -->
-    <h2>喜欢的电影</h2>
+    <h2 id="movie">喜欢的电影</h2>
     <div class="container wrapper">
-        <div class="row">
+        <div class="row movie-box">
             <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
                 <div class="movies movies1">
                     <img data-src="./images/1.webp" alt="黑寡妇" class="lazyload">
@@ -59,7 +59,7 @@
         </div>
     </div>
     <!-- books -->
-    <h2>喜欢的书</h2>
+    <h2 id="book">喜欢的书</h2>
     <div class="container wrapper">
         <div class="row">
             <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
@@ -70,14 +70,14 @@
             </div>
             <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
                 <div class="books books2">
-                    <img data-src="./images/6.webp" alt="阳光姐妹淘" class="lazyload">
-                    <span>阳光姐妹淘</span>
+                    <img data-src="./images/7.webp" alt="泰坦尼克号" class="lazyload">
+                    <span>泰坦尼克号</span>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
                 <div class="books books3">
-                    <img data-src="./images/7.webp" alt="泰坦尼克号" class="lazyload">
-                    <span>泰坦尼克号</span>
+                    <img data-src="./images/6.webp" alt="阳光姐妹淘" class="lazyload">
+                    <span>阳光姐妹淘</span>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
@@ -93,10 +93,10 @@
         <div class="container">
             <div class="row footer">
                 <div class="col-md-8">
-                    <p>王小波说他是一只特立独行的猪，那我就当一只特立独行的鸟吧。交个朋友么，扫下二维码吧</p>
+                    <p id="chat">王小波说他是一只特立独行的猪，那我就当一只特立独行的鸟吧。交个朋友么，扫下二维码吧</p>
                 </div>
                 <div class="col-md-4">
-                    <img data-src="./images/code.png" alt="交友二维码" class="lazyload">
+                    <img data-src="./images/code.png" alt="交友二维码" class="lazyload code">
                 </div>
             </div>
         </div>
@@ -104,7 +104,6 @@
     </footer>
 </body>
 </html>
-<script src="./lazysizes.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -113,4 +112,36 @@
         h = h==0?90:0;
         $(".sub-menu").css("height",h);
     })
+    $(".movies1 img")[0].onload = function() {
+        let h = $(".movies1 img").height();
+        $(".movies3 img").height(h);
+        $(".movies4 img").height(h);
+    }
+    $(".books1 img")[0].onload = function(){
+        let h = $(".books1 img").height();
+        $(".books2 img").height(h+20);
+        $(".books4 img").height(h-20);
+    }
+    $(window).resize(function(){
+        let w = $(window).outerWidth();
+        if(w>=768){
+            let mh = $(".movies1 img").height();
+            $(".movies3 img").height(mh);
+            $(".movies4 img").height(mh);
+            let bh = $(".books1 img").height();
+            $(".books2 img").height(bh+20);
+            $(".books4 img").height(bh-20);
+        }else if(w>=576){
+            for(let i=0; i<4; i++){
+                $(".movies img").eq(i).height(323);
+                $(".books img").eq(i).height(323);
+            }
+        }else if(w<576){
+            for(let i=0; i<4; i++){
+                $(".movies img").eq(i).height("auto");
+                $(".books img").eq(i).height("auto");
+            }
+        }
+    });
 </script>
+<script src="./lazysizes.min.js"></script>

@@ -8,10 +8,9 @@
 .wrapper.about-box {
     display: flex;
     justify-content: space-between;
-    margin: 27px auto 33px;
+    margin: 27px auto 29px;
 }
 #map {
-    width: 590px;
     height: 283px;
     background-color: #666;
 }
@@ -19,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 564px;
 }
 .about-info p {
     line-height: 20px;
@@ -34,4 +32,19 @@
     width: 34px;
     height: 34px;
     margin-right: 20px;
+}
+@media (max-width:1200px) {
+    #map {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:768px) {
+    #map {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+    .about-info p{
+        width: 95%;
+        margin: 0 auto;
+    }
 }

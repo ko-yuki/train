@@ -7,6 +7,7 @@
 }
 .footer-box>.wrapper,
 .footer-box ul {
+    width: 90%;
     display: flex;
 }
 .footer-box>.wrapper {
@@ -14,7 +15,6 @@
 }
 .footer-box ul {
     width: 100%;
-    margin-right: 85px;
     justify-content: space-around;
     align-items: center;
 }
@@ -24,11 +24,20 @@
 .code img {
     width: 224px;
     height: 224px;
-    margin-bottom: 17px;
+    margin: 0 auto 17px;
+}
+.code span {
+    display: block;
+    width: max-content;
+    margin: 10px auto 0;
 }
 .footer-box p {
     font-size: 12px;
     color: #777;
+}
+.footer-box li img {
+    width: 150px;
+    margin: auto;
 }
 .footer-box p::before {
     content: "";
@@ -37,4 +46,16 @@
     height: 2px;
     margin: 10px auto 38px;
     background-color: #9b9b9b;
+}
+@media (max-width: 992px){
+    .footer-box ul {
+        display: block;
+        text-align: center;
+    }
+    .footer-box li img {
+        margin: 0 auto;
+    }
+    .code img {
+        margin: 15px auto 0;
+    }
 }

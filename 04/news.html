@@ -10,14 +10,35 @@
 <body>
     <header></header>
     <div class="news-title">
-        <img src="./images/news-title.png" alt="新闻列表">
+        <img 
+        data-sizes="auto"
+        data-src="./img/news-title-original.png"
+        data-srcset="
+        ./img/news-title-90.png 90w,
+        ./img/news-title-180.png 180w,
+        ./img/news-title-360.png 360w,
+        ./img/news-title-540.png 540w,
+        ./img/news-title-720.png 720w,
+        ./img/news-title-900.png 900w,
+        ./img/news-title-1080.png 1080w,
+        ./img/news-title-1296.png 1296w,
+        ./img/news-title-1512.png 1512w,
+        ./img/news-title-original.png 1903w,
+        " 
+        alt="新闻列表"
+        class="lazyload"
+        >
     </div>
     <main>
-        <div class="wrapper news-box">
-            <ul class="news-list">
-                <li>
+        <div class="wrapper news-box container">
+            <ul class="news-list row">
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload"
+                        >
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -25,9 +46,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        class="lazyload"
+                        >
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -35,9 +59,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload">
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -45,9 +72,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload">
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -55,9 +85,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload">
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -65,9 +98,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload">
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -75,9 +111,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload">
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -85,9 +124,12 @@
                         <p></p>
                     </div>
                 </li>
-                <li>
+                <li class="row">
                     <div class="news-img">
-                        <img src="" alt="">
+                        <img 
+                        src=""
+                        alt=""
+                        class="lazyload">
                     </div>
                     <div class="news-text">
                         <h4></h4>
@@ -114,5 +156,12 @@
 <script>
     $("header").load("header.html");
     $("footer").load("footer.html");
+    function loadJS(u) {
+        var r = document.getElementsByTagName("script")[0], 
+        s = document.createElement("script");
+        s.src = u; 
+        r.parentNode.insertBefore(s, r);
+    }
+    loadJS("./lazysizes.min.js");
 </script>
 <script src="./news.js"></script>

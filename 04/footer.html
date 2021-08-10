@@ -4,24 +4,55 @@
     <link rel="stylesheet" href="./footer.css">
 </head>
 <body>
-    <div class="footer-box">
-        <div class="wrapper">
-            <ul>
+    <div class="footer-box container">
+        <div class="wrapper row">
+            <ul class="col-lg-6">
                 <li>
-                    <img src="./images/pos.png" alt="地址">
-                    <span>成都市双流区天府软件园C区</span>
+                    <img 
+                    data-sizes="auto"
+                    data-src="./img/pos-90.png" alt="地址"
+                    data-srcset="
+                    ./img/pos-90.png 90w,
+                    ./img/pos-original.png 150w
+                    "
+                    class="lazyload">
+                    <span>成都市武侯区天府软件园C区</span>
                 </li>
                 <li>
-                    <img src="./images/email.png" alt="邮件">
+                    <img 
+                    data-sizes="auto"
+                    data-src="./img/email-90.png" 
+                    data-srcset="./img/email-90.png 90w,
+                    ./img/email-original.png 150w"
+                    alt="邮件"
+                    class="lazyload">
                     <span>admin@example.com</span>
                 </li>
                 <li>
-                    <img src="./images/connect.png" alt="电话">
+                    <img
+                    data-sizes="auto" 
+                    data-src="./img/connect-90.png"
+                    data-srcset="
+                    ./img/connect-90.png 90w,
+                    ./img/connect-original.png 150w
+                    "
+                    alt="电话"
+                    class="lazyload">
                     <span>400-123-4567</span>
                 </li>
             </ul>
-            <div class="code">
-                <img src="./images/code.png" alt="二维码">
+            <div class="code col-lg-4 offset-lg-2">
+                <img 
+                data-sizes="auto"
+                data-src="./img/code-180.png" 
+                data-srcset="
+                ./img/code-90.png 90w,
+                ./img/code-180.png 180w,
+                ./img/code-original.png 260w
+                "
+                alt="二维码"
+                class="lazyload"
+                >
                 <span>扫一扫，加入电子数码音响</span>
             </div>
         </div>
