@@ -51,6 +51,7 @@ article ul {
 }
 article li {
     margin-bottom: 12px;
+    margin: 0 auto;
 }
 article img {
     width: 500px;
@@ -131,7 +132,7 @@ article img {
         padding: 0 5%;
     }
     .img-tag img {
-        width: 52%;
+        width: 60%;
         height: auto;
     }
 }
