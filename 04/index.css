@@ -29,10 +29,10 @@ section li {
     text-align: center;
 }
 section img {
-    width: 85px;
-    height: 85px;
+    width: 40%;
+    height: auto;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 12%;
 }
 section span {
     font-size: 24px;
@@ -50,13 +50,10 @@ article ul {
     flex-wrap: wrap;
 }
 article li {
-    width: 595px;
-    height: 570px;
     margin-bottom: 12px;
 }
 article img {
     width: 500px;
-    height: 500px;
     margin: 0 auto;
 }
 .text-tag {
@@ -70,7 +67,7 @@ article img {
     font-size: 30px;
     text-align: center;
     line-height: 47px;
-    margin-bottom: 40px;
+    margin-bottom: 4.2%;
 }
 .text-tag p {
     font-size: 20px;
@@ -82,13 +79,13 @@ article img {
 .ability::before {
     content: "";
     display: block;
-    width: 210px;
+    width: 39%;
     height: 2px;
     background-color: #999;
-    margin: 0 auto 35px;
+    margin: 30px auto;
 }
 .news {
-    margin-bottom: 55px;
+    margin-bottom: 6%;
 }
 .news h2 {
     text-align: center;
@@ -101,10 +98,11 @@ article img {
     justify-content: space-around;
 }
 .news-box dl {
-    width: 270px;
+    margin-bottom: 2%;
 }
 .news-box img {
     width: 100%;
+    height: auto;
 }
 .news-box span {
     display: block;
@@ -126,14 +124,27 @@ article img {
 }
 
 @media (max-width: 1200px){
-    .text-tag {
-        height: 400px;
+    li.text-tag {
+        height: auto;
         margin-bottom: 2%;
+        padding: 0 5%;
+    }
+    .img-tag img {
+        width: 52%;
+        height: auto;
     }
 }
-@media (max-width: 768px){
-    article img {
-        width: 400px;
-        height: 400px;
+@media (max-width:768px) {
+    section li {
+        margin-bottom: 5%;
+    }
+    .text-tag p {
+        font-size: 16px;
+    }
+    
+}
+@media (max-width:576px) {
+    section span {
+        font-size: 20px;
     }
 }

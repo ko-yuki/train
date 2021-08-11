@@ -1,6 +1,6 @@
 .news-title img {
     width: 100%;
-    height: 120px;
+    height: auto;
 }
 .news-list {
     box-sizing: border-box;
@@ -22,7 +22,7 @@
 }
 .news-img img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .news-text {
     padding-top: 10px;
@@ -80,6 +80,6 @@
 @media (max-width: 576px){
     .news-list li {
         display: block;
-        width: 54%;
+        width: 90%;
     }
 }
