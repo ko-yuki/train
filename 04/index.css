@@ -62,7 +62,6 @@ article img {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    padding-left: 65px;
 }
 .text-tag h3 {
     font-size: 30px;
@@ -99,7 +98,6 @@ article img {
     justify-content: space-around;
 }
 .news-box dl {
-    padding: 0;
     margin-bottom: 2%;
 }
 .news-box img {
@@ -129,7 +127,10 @@ article img {
     li.text-tag {
         height: auto;
         margin-bottom: 2%;
-        padding: 0 5%;
+        padding: 0;
+    }
+    li.img-tag {
+        padding: 0;
     }
     .img-tag img {
         width: 60%;
@@ -143,10 +144,12 @@ article img {
     .text-tag p {
         font-size: 16px;
     }
-    
 }
 @media (max-width:576px) {
     section span {
         font-size: 20px;
+    }
+    .news-box dl {
+        padding: 0;
     }
 }
