@@ -98,6 +98,7 @@ article img {
     justify-content: space-around;
 }
 .news-box dl {
+    padding: 0;
     margin-bottom: 2%;
 }
 .news-box img {
