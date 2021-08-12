@@ -2,33 +2,29 @@
 let news = [];
 function getNews(page){
     axios({
-        url:"//mock-api.com/rg1Mk4gY.mock/newslist",
-        params:{page},
+        url:"https://www.mxnzp.com/api/news/list",
+        params:{
+            app_id:"ecqvgalqkxjnhswd",
+            app_secret:"bHJtcmdmYjNQekVZL0FSdk16NktqQT09",
+            typeId:512,
+            page
+        },
         method:"get"
     })
     .then(res=>{
-        news = res.data;
-        let w = $(".news-img img").eq(0).width();
+        news = res.data.data;
         news.forEach((item,index)=>{
-            let u = item.url.split(",");
-            if(w>=214){
-                $(".news-img img").eq(index).attr("src",u[2]);
-            }else if(w>=180){
-                $(".news-img img").eq(index).attr("src",u[1]);
-            }else {
-                $(".news-img img").eq(index).attr("src",u[0]);
-            }
-            $(".news-img img").eq(index).attr("alt",item.text);
+            $(".news-img img").eq(index).attr("src",item.imgList[0]);
             $(".news-text h4").eq(index).text(item.title);
-            $(".news-text span").eq(index).text(item.date);
-            $(".news-text p").eq(index).text(item.main);
+            $(".news-text span").eq(index).text(item.postTime);
+            $(".news-text p").eq(index).text(item.digest);
         })
     })
 }
 
 // 切换页码
-// 记录当前页码，默认为1
-let page = 1;
+let page = window.location.href.split("#")[1].split("=")[1];
+changeStyle(page);
 getNews(page);
 $(".page-box").on("click",function(e){
     let len = $(".page").length;
@@ -46,6 +42,7 @@ $(".page-box").on("click",function(e){
             page = len;
         }
     }
+    window.location.hash = "page="+page;
     changeStyle(page);
     getNews(page);
 })
@@ -99,6 +96,23 @@ function changeStyle(page){
 // 需要传递新闻的编号
 $(".news-list").on("click","li",function(e){
     let index = $(this).index();
-    let url = encodeURI("news-detail.html?id="+news[index].id);
-    location.href = url;
+    axios({
+        url:"https://www.mxnzp.com/api/news/details",
+        params:{
+            app_id:"ecqvgalqkxjnhswd",
+            app_secret:"bHJtcmdmYjNQekVZL0FSdk16NktqQT09",
+            newsId:news[index].newsId
+        }
+    })
+    .then(res=>{
+        let details = {
+            title:res.data.data.title,
+            content:res.data.data.content,
+            images:res.data.data.images,
+            time:res.data.data.ptime
+        }
+        sessionStorage.setItem("details",JSON.stringify(details));
+        let url = encodeURI("news-detail.html?page="+page+"&newsId="+news[index].newsId);
+        location.href = url;
+    })
 })

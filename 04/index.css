@@ -8,6 +8,7 @@ main {
 }
 .swiper-container img { 
     width: 100%; 
+    cursor: pointer;
 }
 .swiper-pagination-bullet-active {
     background-color: #E10000;
@@ -56,6 +57,14 @@ article li {
 article img {
     width: 500px;
     margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+article img:hover {
+    transform: scale(1.1);
+}
+.img-tag {
+    overflow: hidden;
 }
 .text-tag {
     display: flex;
@@ -71,6 +80,10 @@ article img {
 }
 .text-tag p {
     font-size: 20px;
+    cursor: pointer;
+}
+.text-tag p:hover {
+    color: #E10000;
 }
 .text-tag .ability {
     font-weight: 600;
@@ -100,9 +113,17 @@ article img {
 .news-box dl {
     margin-bottom: 2%;
 }
+.news-box dt {
+    overflow: hidden;
+}
 .news-box img {
     width: 100%;
     height: auto;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.news-box img:hover {
+    transform: scale(1.1);
 }
 .news-box span {
     display: block;
@@ -121,6 +142,10 @@ article img {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    cursor: pointer;
+}
+.news-box p:hover {
+    color: #E10000;
 }
 
 @media (max-width: 1200px){

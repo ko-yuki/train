@@ -37,14 +37,30 @@ div.about-info {
     font-size: 14px;
     color: #4e4e4e;
 }
+.about-info p:hover {
+    color: #E10000;
+    cursor: pointer;
+}
 .about-info li {
     display: flex;
     align-items: center;
+    overflow: hidden;
+}
+.about-info li span {
+    cursor: pointer;
+}
+.about-info li span:hover {
+    opacity: 0.8;
 }
 .about-info img {
     width: 34px;
     height: 34px;
     margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.about-info img:hover {
+    transform: scale(1.1);
 }
 @media (max-width:1200px) {
     #map {

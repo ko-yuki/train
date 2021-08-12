@@ -17,10 +17,13 @@
                     <a href="./index.html">首页</a>
                 </span>
                 <span>
-                    <a href="./news.html">新闻</a>
+                    <a href="./news.html#page=1">新闻</a>
                 </span>
                 <span>
                     <a href="./about.html">关于我们</a>
+                </span>
+                <span>
+                    <a href="#" onclick="connectUs()">联系我们</a>
                 </span>
             </nav>
             <div class="menu">
@@ -37,7 +40,28 @@
             <p>
                 <a href="./about.html">关于我们</a>
             </p>
+            <p>
+                <a href="#" onclick="connectUs()">联系我们</a>
+            </p>
         </div>
+    </div>
+    <div class="connect-us">
+        <h2>联系我们</h2>
+        <div class="close">×</div>
+        <ul>
+            <li>
+                <img data-src="./img/pos-90.png" alt="地址" class="lazyload">
+                <span>成都市武侯区天府软件园C区</span>
+            </li>
+            <li>
+                <img data-src="./img/email-90.png" alt="邮箱" class="lazyload">
+                <span>admin@example.com</span>
+            </li>
+            <li>
+                <img data-src="./img/connect-90.png" alt="电话" class="lazyload">
+                <span>400-123-4567</span>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
@@ -48,4 +72,10 @@
         h = h==0?72:0;
         $(".sub-nav").css("height",h);
     })
+    function connectUs(){
+        $(".connect-us").css("display","block");
+        $(".close").on("click",function(){
+            $(".connect-us").css("display","none")
+        })
+    }
 </script>

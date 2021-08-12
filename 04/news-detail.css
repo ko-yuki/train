@@ -39,16 +39,19 @@ html, .n-body {
     width: 54%;
     height: auto;
     margin: 0 auto;
+    cursor: pointer;
 }
 .content p {
     font-size: 14px;
     line-height: 20px;
+    cursor: pointer;
+    text-indent: 2em;
+}
+.content p:hover {
+    color: #E10000;
 }
 .info {
-    margin: 25px 0 17px;
-}
-.indc {
-    margin-bottom: 28px;
+    margin: 25px 0 28px;
 }
 
 @media (max-width: 576px){

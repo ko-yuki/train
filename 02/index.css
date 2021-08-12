@@ -1,6 +1,6 @@
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 84px;
     line-height: 84px;
@@ -10,7 +10,14 @@ header {
     font-size: 18px;
     color: #fff;
 }
-header>div {
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+.header-box>div {
     display: flex;
     align-items: center;
 }
@@ -113,7 +120,12 @@ footer>p {
 
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1460px;
+        max-width: 1200px;
+    }
+}
+@media (max-width:992px) {
+    .footer.row p {
+        font-size: 20px;
     }
 }
 @media (max-width: 768px),(max-width: 576px){
@@ -133,6 +145,10 @@ footer>p {
     .footer .code {
         width: 50%;
         height: auto;
+        margin: 0 auto;
+    }
+    .footer.row p {
+        margin: 0;
     }
 }
 @media (min-width:768px) {
