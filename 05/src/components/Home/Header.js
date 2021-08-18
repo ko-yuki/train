@@ -9,6 +9,7 @@ class Header extends React.Component{
             title:["All","JavaScript","Ruby","Java","CSS","Python"]
         };
     }
+
     render(){
         return  <ul style={{
                     display:"flex",

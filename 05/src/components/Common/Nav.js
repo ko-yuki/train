@@ -8,14 +8,17 @@ class Nav extends Component {
             navs:["Popular","Battle"]
         }
     }
-    isActive(nav){
-        let param = window.location.hash.split("#")[1].replace("/","");
-        if(nav == "Popular"){
-            return param != "battle"?true:false;
-        }else{
-            return param == "battle"?true:false;
+
+    isActive = (nav) => {
+        const param = window.location.hash.split("#")[1].replace("/","");
+        const idx = param.indexOf("battle");
+        if(nav === "Popular"){
+            return idx === -1;
         }
+            return idx !== -1;
+        
     }
+
     render() {
         return (
             <div>
@@ -29,7 +32,7 @@ class Nav extends Component {
                         {
                             this.state.navs.map((nav,index)=>(
                                 <li key={index} style={{padding:"0 1%"}}>
-                                    <NavLink isActive={()=>this.isActive(nav)} activeStyle={{color:"rgb(180, 44, 30)"}} to={nav=="Popular"?"/all":"/battle"}>{nav}</NavLink>
+                                    <NavLink isActive={()=>this.isActive(nav)} activeStyle={{color:"rgb(180, 44, 30)"}} to={nav==="Popular"?"/all":"/battle"}>{nav}</NavLink>
                                 </li>
                             ))
                         }

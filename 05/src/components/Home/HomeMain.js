@@ -35,10 +35,11 @@ class Main extends React.Component{
             err:""
         };
     }
+
     componentDidMount(){
-        let param = this.props.location.pathname.split("/")[1];
+        const param = this.props.location.pathname.split("/")[1];
         // 先从sessionStorage中读取数据
-        let data = sessionStorage.getItem(param);
+        const data = sessionStorage.getItem(param);
         if(data){
             this.setState({
                 [param]:JSON.parse(data)
@@ -47,17 +48,19 @@ class Main extends React.Component{
             this.getData(param)
         }
     }
+
     componentWillUnmount = () => {
-        this.setState = (state,callback)=>{
-          return;
+        this.setState = ()=>{
+          
         };
     }
+
     // 请求数据
     getData = async(param)=>{
         let res = null;
         try {
             // 请求数据
-            if(param == "all"){
+            if(param === "all"){
                 res = await axios({
                     url:"https://api.github.com/search/repositories?q=stars:%3E1&sort=stars&order=desc&type=Repositories",
                     params:{
@@ -74,9 +77,9 @@ class Main extends React.Component{
                     }
                 });
             }
-            let arr = [];
+            const arr = [];
             res.data.items.forEach(item=>{
-                let obj = {
+                const obj = {
                     id:item.id,
                     url:item.owner.avatar_url,
                     name:item.owner.login,
@@ -108,7 +111,7 @@ class Main extends React.Component{
                 };
                 arr.push(obj);
             });
-            let newParam = {
+            const newParam = {
                 pageNum:this.state[param].pageNum+1,
                 data:this.state[param].data.concat(arr)
             }
@@ -126,21 +129,22 @@ class Main extends React.Component{
             }, 1500);
         }
     }
+
     render(){
         let msg = "Loading ...";
-        if(this.state.err != ""){
+        if(this.state.err !== ""){
             msg = "403,数据请求失败，请刷新页面重试！";
         }else {
             msg = "Loading ...";
         }
-        let param = this.props.location.pathname.split("/")[1];
+        const param = this.props.location.pathname.split("/")[1];
         return <div style={{margin:"12px auto 0"}} className="container">
                 <InfiniteScroll
                 style={{overflow:"unset"}}
                 dataLength={this.state[param].data.length}
                 next={()=>this.getData(param)}
-                hasMore={true}
-                loader={<h4 style={{textAlign:"center"}}><i className="fa fa-spinner fa-spin" style={{display:this.state.err==""?"inline-block":"none"}}></i> {msg}</h4>}
+                hasMore
+                loader={<h4 style={{textAlign:"center"}}><i className="fa fa-spinner fa-spin" style={{display:this.state.err===""?"inline-block":"none"}} /> {msg}</h4>}
                 >
                     <ul style={{justifyContent:"space-around"}} className="row">
                         {
@@ -150,13 +154,13 @@ class Main extends React.Component{
                                 className="col-9 col-sm-6 col-md-4 col-lg-3" 
                                 key={idx}>
                                     <h2 style={{textAlign:"center",fontSize:"24px",margin:"48px 0 25px"}}>#{idx+1}</h2>
-                                    <img data-src={item.url} className="lazyload" style={{width:"61%",height:"auto",margin:"0 auto",borderRadius:"4px"}} />
+                                    <img data-src={item.url} alt="" className="lazyload" style={{width:"61%",height:"auto",margin:"0 auto",borderRadius:"4px"}} />
                                     <h3 style={{textAlign:"center",fontSize:"20px",margin:"22px 0",color:"#b42c1e"}}>{item.name}</h3>
                                     <ul className="fa-ul" style={{width:"100%",marginLeft:"4%"}}>
                                         {
-                                            item.infos.map((info,idx)=>(
-                                                <li style={{lineHeight:"25px",marginBottom:"10px"}}key={idx}>
-                                                    <i style={{fontSize:"16px",color:info.color}} className={"icon fa "+info.icon}>
+                                            item.infos.map((info)=>(
+                                                <li style={{lineHeight:"25px",marginBottom:"10px"}}key={info.icon}>
+                                                    <i style={{fontSize:"16px",color:info.color}} className={`icon fa ${info.icon}`}>
                                                         <span style={{marginLeft:"10px",color:"black",fontWeight:"600"}}>{info.text}{info.end}</span>
                                                     </i>
                                                 </li>

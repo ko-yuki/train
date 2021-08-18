@@ -1,14 +1,19 @@
 import React from 'react';
-import Header from "@/components/Home/Header";
-import HomeMain from "@/components/Home/HomeMain";
 import {Route} from "react-router-dom";
+import Header from "../components/Home/Header";
+import HomeMain from "../components/Home/HomeMain";
+
 class Home extends React.Component {
     render() {
-        let url = window.location.href.split("#")[1];
         return (
             <div style={{flex:1}}>
-                <Header></Header>
-                <Route path={url} component={HomeMain}></Route>
+                <Header />
+                <Route path="/all" component={HomeMain} />
+                <Route path="/javascript" component={HomeMain} />
+                <Route path="/ruby" component={HomeMain} />
+                <Route path="/java" component={HomeMain} />
+                <Route path="/css" component={HomeMain} />
+                <Route path="/python" component={HomeMain} />
             </div>
         );
     }
