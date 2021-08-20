@@ -255,7 +255,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/train/01";
+/******/ 	__webpack_require__.p = "/train/01/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -986,4 +986,4 @@ react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_rou
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.356bcf52.js.map
+//# sourceMappingURL=main.cbcb1f85.js.map
