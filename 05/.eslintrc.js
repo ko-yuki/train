@@ -13,7 +13,12 @@ module.exports = {
         'react/no-array-index-key': 0,
         'no-console': 0,
         'jsx-a11y/anchor-is-valid': 0,
+        "import/no-unresolved": 0,
         'react/destructuring-assignment': 0,
-        'react/jsx-one-expression-per-line': 0
+        'react/jsx-one-expression-per-line': 0,
+        'import/extensions':[0,'ignorePackages',{
+            'js':'never',
+            'json':'never'
+        }]
     }
 }

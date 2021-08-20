@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header li {
+    margin: 0 7px;
+    cursor: pointer;
+    line-height: 50px;
+}
+.header a {
+    font-weight: 600;
+}
+.actived {
+    color: #b42c1e;
+}

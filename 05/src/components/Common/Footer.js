@@ -1,16 +1,10 @@
 // 定义尾部
-import React from 'react';
+import React from "react";
+import footer from "./Footer.css";
 
-class Footer extends React.Component{
-    render(){
-        return <p style={{
-                    width:"100%",
-                    lineHeight:"50px",
-                    textAlign:"center",
-                    backgroundColor:"#ebebeb",
-                    fontSize:"14px",
-                    marginBottom:"0"
-                }}>版权所有 &copy; xuezhonglin</p>
-    }
+class Footer extends React.Component {
+  render() {
+    return <p className={footer.footer}>版权所有 &copy; xuezhonglin</p>;
+  }
 }
 export default Footer;

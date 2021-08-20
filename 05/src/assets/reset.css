@@ -6,10 +6,6 @@ html,body,#app {
     height: 100%;
     width: 100%;
 }
-a {
-    text-decoration: none;
-    color: black;
-}
 i,b,em,strong {
     font-style: normal;
     font-weight: normal;
@@ -28,14 +24,4 @@ img {
     width: 20px;
     height: auto;
     text-align: center;
-}
-li a {
-    color: black;
-    text-decoration: none;
-}
-li a:hover {
-    text-decoration: none;
-}
-button:enabled:hover {
-    color: lightskyblue;
 }
