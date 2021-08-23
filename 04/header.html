@@ -14,34 +14,34 @@
             </div>
             <nav>
                 <span>
-                    <a href="./index.html">首页</a>
+                    <a href="index.html">首页</a>
                 </span>
                 <span>
-                    <a href="./news.html#page=1">新闻</a>
+                    <a href="news.html#page=1">新闻</a>
                 </span>
                 <span>
-                    <a href="./about.html">关于我们</a>
+                    <a href="about.html">关于我们</a>
                 </span>
                 <span>
-                    <a href="#" onclick="connectUs()">联系我们</a>
+                    <a href="#" class="connect" onclick="connectUs()">联系我们</a>
                 </span>
             </nav>
             <div class="menu">
-                <img src="./img/menu.png" alt="二级菜单">
+                <img src="img/menu.png" alt="二级菜单">
             </div>
         </div>
         <div class="sub-nav">
             <p>
-                <a href="./index.html">首页</a>
+                <a href="index.html">首页</a>
             </p>
             <p>
-                <a href="./news.html">新闻</a>
+                <a href="news.html">新闻</a>
             </p>
             <p>
-                <a href="./about.html">关于我们</a>
+                <a href="about.html">关于我们</a>
             </p>
             <p>
-                <a href="#" onclick="connectUs()">联系我们</a>
+                <a href="#" class="connect" onclick="connectUs()">联系我们</a>
             </p>
         </div>
     </div>
@@ -69,7 +69,7 @@
 <script>
     $(".menu").on("click",function(){
         let h = $(".sub-nav").height();
-        h = h==0?72:0;
+        h = h==0?102:0;
         $(".sub-nav").css("height",h);
     })
     function connectUs(){
@@ -78,4 +78,13 @@
             $(".connect-us").css("display","none")
         })
     }
+    $(document).ready(function(){
+        let url = window.location.href;
+        for(let i=0; i<$("nav a").length; i++){
+            if(url.indexOf($("nav a").eq(i).attr("href"))!==-1){
+                $("nav a").eq(i).addClass("actived");
+                $("nav a").not($("nav a").eq(i)).addClass("");
+            }
+        }
+    })
 </script>
