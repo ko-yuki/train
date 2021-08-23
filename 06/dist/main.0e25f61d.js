@@ -137,7 +137,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/train/02/";
+/******/ 	__webpack_require__.p = "/train/06/dist/";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -470,4 +470,4 @@ react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(pages_Wel
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.6fbcbf13.js.map
+//# sourceMappingURL=main.0e25f61d.js.map
