@@ -29,14 +29,14 @@ getNews(page);
 $(".page-box").on("click",function(e){
     let len = $(".page").length;
     let name = e.target.className;
-    if(name!="prev" && name!="next"){
+    if(name!="prev-btn" && name!="next-btn"){
         page = e.target.innerHTML;
-    }else if(name == "prev"){
+    }else if(name == "prev-btn"){
         page--;
         if(page<=0){
             page = 1;
         }
-    }else if(name == "next"){
+    }else if(name == "next-btn"){
         page++;
         if(page>=len){
             page = len;
@@ -52,40 +52,44 @@ function changeStyle(page){
     let len = $(".page").length;
     for(let i=1; i<=len; i++){
         if(i == page){
-            $(`.page.page${i}`).css({
+            $(`.page.page${i} button`).css({
                 backgroundColor:"black",
                 color:"white"
             });
-            $(".page").not(`.page${i}`).css({
+            $(".page button").not(`.page${i} button`).css({
                 backgroundColor:"white",
                 color:"black"
             })
         }
     }
     if(page == 1){
-        $(".prev").css({
+        $(".prev button").css({
             cursor:"not-allowed",
             opacity:0.3
         });
-        $(".next").css({
+        $(".prev button").prop("disabled",true);
+        $(".next button").css({
             cursor:"pointer",
             opacity:1
         });
+        $(".next button").prop("disabled",false);
     }else if(page == len){
-        $(".prev").css({
+        $(".prev button").css({
             cursor:"pointer",
             opacity:1
         });
-        $(".next").css({
+        $(".prev button").prop("disabled",false);
+        $(".next button").css({
             cursor:"not-allowed",
             opacity:0.3
         });
+        $(".next button").prop("disabled",true);
     }else{
-        $(".prev").css({
+        $(".prev button").css({
             cursor:"pointer",
             opacity:1
         });
-        $(".next").css({
+        $(".next button").css({
             cursor:"pointer",
             opacity:1
         }); 
