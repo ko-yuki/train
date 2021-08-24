@@ -23,7 +23,7 @@ function getNews(page){
 }
 
 // 切换页码
-let page = window.location.href.split("#")[1].split("=")[1];
+let page = window.location.href.split("?")[1].split("=")[1];
 changeStyle(page);
 getNews(page);
 $(".page-box").on("click",function(e){
@@ -42,7 +42,7 @@ $(".page-box").on("click",function(e){
             page = len;
         }
     }
-    window.location.hash = "page="+page;
+    window.history.pushState("","",window.location.href.split("?")[0] + "?page=" + page);
     changeStyle(page);
     getNews(page);
 })
@@ -60,6 +60,12 @@ function changeStyle(page){
                 backgroundColor:"white",
                 color:"black"
             })
+        }
+        if($(`.page.page${i} button`).text() == page){
+            $(`.page.page${i} button`).prop("disabled",true);
+            $(`.page.page${i} button`).css("cursor","not-allowed");
+            $(".page button").not($(`.page.page${i} button`)).prop("disabled",false);
+            $(".page button").not($(`.page.page${i} button`)).css("cursor","pointer");
         }
     }
     if(page == 1){
