@@ -1,0 +1,57 @@
+.title {
+    font-weight: 700;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 188px;
+    margin-top: 15px;
+}
+.box button {
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    border-radius: 50%;
+    border: 0;
+    margin: 0 8px 16px 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    font-size: 12px;
+}
+.box button:hover {
+    border-color: black;
+}
+.star {
+    width: 178px;
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.btn {
+    width: max-content;
+    margin-left: 30px;
+    border: 1px solid rgba(27,31,35,.15);
+    border-radius: 4px;
+}
+.btn button {
+    height: 28px;
+    line-height: 28px;
+    border: 0;
+    cursor: pointer;
+}
+.btn .sbtn {
+    width: 62.5px;
+    background-color: #eff3f6;
+    border-right: 1px solid rgba(27,31,35,.15);
+}
+.sbtn:hover {
+    background-color: #e9ebef;
+}
+.nbtn {
+    width: 48.5px;
+    background-color: #fff;
+}
+.nbtn:hover {
+    color: lightblue;
+}
