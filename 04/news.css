@@ -1,3 +1,13 @@
+html, .n-body {
+    height: 100%;
+}
+.n-body {
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    flex: 1;
+}
 .news-title img {
     width: 100%;
     height: auto;
@@ -15,16 +25,14 @@
     justify-content: space-between;
     margin-bottom: 15px;
     cursor: pointer;
+    overflow: hidden;
 }
 .news-img {
-    flex-basis: 48%;
-    margin-right: 10px;
     overflow: hidden;
 }
 .news-img img {
     transition: all 0.3s;
     object-fit: cover;
-    object-position: -120px -40px;
     transform-origin: left;
 }
 .news-img img:hover {
@@ -92,9 +100,17 @@
     }
 }
 @media (max-width: 576px){
+    .news-img.col-12 {
+        width: 100%;
+        max-height: 300px;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    .news-text.col-12 {
+        padding: 0;
+    }
     .news-list li {
-        display: block;
-        width: 90%;
+        margin-bottom: 30px;
     }
 }
 @media (min-width:578px) {

@@ -6,7 +6,8 @@ function getNews(page){
         params:{
             app_id:"ecqvgalqkxjnhswd",
             app_secret:"bHJtcmdmYjNQekVZL0FSdk16NktqQT09",
-            typeId:512,
+            typeId:513,
+            limit:8,
             page
         },
         method:"get"
