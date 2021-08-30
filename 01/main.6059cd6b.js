@@ -69,7 +69,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) + "." + {"2":"63e5e26b","3":"efae5798"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) + "." + {"2":"ac72a18e","3":"efae5798"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -255,7 +255,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/train/05/dist/";
+/******/ 	__webpack_require__.p = "/train/01/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -1000,4 +1000,4 @@ react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_rou
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.f48c910e.js.map
+//# sourceMappingURL=main.6059cd6b.js.map
