@@ -55,7 +55,7 @@ var react_router_dom = __webpack_require__(15);
 
 // CONCATENATED MODULE: ./src/pages/Result.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ var pages_Result = ({"loading":"_1WNOeHAqSQUMUmNldfgFL_","box":"_2rqa50Rss8OzhZYpg8g9ts","main_box":"_3p_XcgnhIhB4-GonbxOVJV","scores":"yvpsxm3RKHD61ND0gXwGv","name":"_3uBbbpqMNob68e0fjUvkX","icon_box":"_3eq0iuLaPMLiSQmu210gy","tobattle":"_17y-tQkrkAmZ1Q0aYCyrHl"});
+/* harmony default export */ var pages_Result = ({"loading":"_1WNOeHAqSQUMUmNldfgFL_","box":"_2rqa50Rss8OzhZYpg8g9ts","main_box":"_3p_XcgnhIhB4-GonbxOVJV","scores":"yvpsxm3RKHD61ND0gXwGv","name":"_3uBbbpqMNob68e0fjUvkX","icon_box":"_3eq0iuLaPMLiSQmu210gy","tobattle":"_17y-tQkrkAmZ1Q0aYCyrHl","error":"_1Ti-_wQFMSsoADen10E25D"});
 // CONCATENATED MODULE: ./src/pages/Result.js
 
 
@@ -122,9 +122,22 @@ var Result_Result = /*#__PURE__*/function (_Component) {
 
                 _context.next = 8;
                 return axios_default.a.all([axios_default.a.get("https://api.github.com/users/".concat(p1)), axios_default.a.get("https://api.github.com/users/".concat(p2))])["catch"](function (err) {
-                  _this2.setState({
-                    err: err.response.data.message
-                  });
+                  var status = err.response.status;
+                  var message = err.response.data.message;
+
+                  if (status === 404) {
+                    _this2.setState({
+                      err: message
+                    }, function () {
+                      setTimeout(function () {
+                        _this2.props.history.push('/battle');
+                      }, 1000);
+                    });
+                  } else if (status === 403) {
+                    _this2.setState({
+                      err: message
+                    });
+                  }
                 });
 
               case 8:
@@ -156,11 +169,9 @@ var Result_Result = /*#__PURE__*/function (_Component) {
                   s2.result = "Winner";
                 }
 
-                setTimeout(function () {
-                  _this2.setState({
-                    data: arr
-                  });
-                }, 1000);
+                this.setState({
+                  data: arr
+                });
 
               case 15:
               case "end":
@@ -185,9 +196,7 @@ var Result_Result = /*#__PURE__*/function (_Component) {
 
       if (err !== "") {
         return /*#__PURE__*/react_default.a.createElement("p", {
-          style: {
-            color: 'red'
-          }
+          className: pages_Result.error
         }, "\u6570\u636E\u8BF7\u6C42\u5931\u8D25\uFF0C\u8BF7\u5237\u65B0\u91CD\u8BD5\uFF01", /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), err);
       }
 
@@ -247,4 +256,4 @@ var Result_Result = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=3.efae5798.js.map
+//# sourceMappingURL=3.918feba0.js.map
