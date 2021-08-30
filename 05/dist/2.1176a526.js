@@ -148,8 +148,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 
                 _this.setState({
                   urlOne: res.data.avatar_url,
-                  flagOne: true,
-                  loadingOne: false
+                  flagOne: true
                 });
 
                 _context.next = 18;
@@ -173,8 +172,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 
                 _this.setState({
                   urlTwo: _res.data.avatar_url,
-                  flagTwo: true,
-                  loadingTwo: false
+                  flagTwo: true
                 });
 
               case 18:
@@ -223,6 +221,18 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         pathname: "/battle/result",
         search: "?player1=".concat(nameOne, "&player2=").concat(nameTwo)
       });
+    });
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "isLoad", function (index) {
+      if (index === 0) {
+        _this.setState({
+          loadingOne: false
+        });
+      } else {
+        _this.setState({
+          loadingTwo: false
+        });
+      }
     });
 
     _this.state = {
@@ -347,9 +357,21 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         style: {
           width: "100%"
         }
-      }, /*#__PURE__*/react_default.a.createElement("img", {
+      }, /*#__PURE__*/react_default.a.createElement("p", {
+        style: {
+          display: loadingOne ? 'inline-block' : 'none'
+        }
+      }, /*#__PURE__*/react_default.a.createElement("i", {
+        className: "fa fa-spinner fa-spin"
+      }), " loading"), /*#__PURE__*/react_default.a.createElement("img", {
+        onLoad: function onLoad() {
+          return _this2.isLoad(0);
+        },
         src: urlOne,
-        alt: ""
+        alt: "",
+        style: {
+          display: loadingOne ? 'none' : 'inline-block'
+        }
       }), /*#__PURE__*/react_default.a.createElement("span", null, nameOne)), /*#__PURE__*/react_default.a.createElement("button", {
         className: pages_Battle.close_btn,
         type: "button",
@@ -406,9 +428,21 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react_default.a.createElement("div", {
         className: pages_Battle.img_box
-      }, /*#__PURE__*/react_default.a.createElement("img", {
+      }, /*#__PURE__*/react_default.a.createElement("p", {
+        style: {
+          display: loadingTwo ? 'inline-block' : 'none'
+        }
+      }, /*#__PURE__*/react_default.a.createElement("i", {
+        className: "fa fa-spinner fa-spin"
+      }), " loading"), /*#__PURE__*/react_default.a.createElement("img", {
+        onLoad: function onLoad() {
+          return _this2.isLoad(1);
+        },
         src: urlTwo,
-        alt: ""
+        alt: "",
+        style: {
+          display: loadingTwo ? 'none' : 'inline-block'
+        }
       }), /*#__PURE__*/react_default.a.createElement("span", null, nameTwo)), /*#__PURE__*/react_default.a.createElement("button", {
         className: pages_Battle.close_btn,
         type: "button",
@@ -436,4 +470,4 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=2.1e1d7b5a.js.map
+//# sourceMappingURL=2.1176a526.js.map
