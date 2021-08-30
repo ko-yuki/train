@@ -136,7 +136,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                 });
 
                 _context.next = 9;
-                return axios_default()("/app/".concat(nameOne, ".png?size=200"))["catch"](function (err) {
+                return axios_default()("https://github.com/".concat(nameOne, ".png?size=200"))["catch"](function (err) {
                   _this.setState({
                     errOne: err.response.data,
                     loadingOne: false
@@ -161,7 +161,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                 });
 
                 _context.next = 16;
-                return axios_default()("/app/".concat(nameTwo, ".png?size=200"))["catch"](function (err) {
+                return axios_default()("https://github.com/".concat(nameTwo, ".png?size=200"))["catch"](function (err) {
                   _this.setState({
                     errTwo: err.response.data,
                     loadingTwo: false
@@ -436,4 +436,4 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=2.ac72a18e.js.map
+//# sourceMappingURL=2.26b0f859.js.map
