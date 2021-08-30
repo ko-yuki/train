@@ -69,7 +69,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) + "." + {"2":"b3b9384a","3":"26aaa432"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) + "." + {"2":"63e5e26b","3":"efae5798"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -107,7 +107,7 @@
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({}[chunkId]||chunkId) + "." + {"2":"60d28170","3":"ba7ac4cd"}[chunkId] + ".chunk.css";
+/******/ 				var href = "" + ({}[chunkId]||chunkId) + "." + {"2":"be4e1d7a","3":"ba7ac4cd"}[chunkId] + ".chunk.css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -255,7 +255,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/train/01/";
+/******/ 	__webpack_require__.p = "/train/05/dist/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -269,7 +269,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([75,1]);
+/******/ 	deferredModules.push([81,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -280,9 +280,9 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(37);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(39);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -296,14 +296,14 @@ ___CSS_LOADER_EXPORT___.push([module.i, "a {\n  text-decoration: none;\n  color:
 
 /***/ }),
 
-/***/ 75:
+/***/ 81:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag = __webpack_require__(36);
+var injectStylesIntoStyleTag = __webpack_require__(37);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/assets/index.less
@@ -327,24 +327,24 @@ var update = injectStylesIntoStyleTag_default()(assets["a" /* default */], optio
 // extracted by mini-css-extract-plugin
 
 // EXTERNAL MODULE: ./node_modules/normalize.css/normalize.css
-var normalize = __webpack_require__(41);
+var normalize = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/font-awesome/css/font-awesome.min.css
-var font_awesome_min = __webpack_require__(42);
+var font_awesome_min = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/bootstrap/dist/css/bootstrap.min.css
-var bootstrap_min = __webpack_require__(43);
+var bootstrap_min = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(39);
+var react_dom = __webpack_require__(40);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/esm/react-router-dom.js
-var react_router_dom = __webpack_require__(13);
+var react_router_dom = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
 var classCallCheck = __webpack_require__(7);
@@ -373,7 +373,7 @@ var react_router = __webpack_require__(2);
 var loadable_esm = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(15);
+var assertThisInitialized = __webpack_require__(13);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js
@@ -447,7 +447,7 @@ var Nav_Nav = /*#__PURE__*/function (_Component) {
           activeStyle: {
             color: "rgb(180, 44, 30)"
           },
-          to: nav === "Popular" ? "/all" : "/battle"
+          to: nav === "Popular" ? "/popular?language=all" : "/battle"
         }, nav));
       })));
     }
@@ -517,7 +517,6 @@ function Header_isNativeReflectConstruct() { if (typeof Reflect === "undefined" 
 
 
 
-
 var Header_Header = /*#__PURE__*/function (_React$Component) {
   inherits_default()(Header, _React$Component);
 
@@ -530,24 +529,49 @@ var Header_Header = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      title: ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"]
+      title: ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"],
+      param: 'all'
     };
     return _this;
   }
 
   createClass_default()(Header, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var s = this.props.props.location.search;
+      var p = new URLSearchParams(s).get('language');
+      this.setState({
+        param: p
+      });
+    }
+  }, {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(newProps) {
+      var s = newProps.props.location.search;
+      var p = new URLSearchParams(s).get('language');
+      this.setState({
+        param: p
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var title = this.state.title;
+      var _this$state = this.state,
+          title = _this$state.title,
+          param = _this$state.param;
+      var _onClick = this.props.onClick;
       return /*#__PURE__*/react_default.a.createElement("ul", {
         className: Home_Header.header
-      }, title.map(function (item, index) {
+      }, title.map(function (item) {
         return /*#__PURE__*/react_default.a.createElement("li", {
-          key: index
-        }, /*#__PURE__*/react_default.a.createElement(react_router_dom["b" /* NavLink */], {
-          activeClassName: Home_Header.actived,
-          to: item.toLowerCase()
-        }, item));
+          style: {
+            color: param === item.toLowerCase() ? '#b42c1e' : '#000'
+          },
+          key: item,
+          onClick: function onClick() {
+            return _onClick(item.toLowerCase());
+          }
+        }, item);
       }));
     }
   }]);
@@ -556,8 +580,12 @@ var Header_Header = /*#__PURE__*/function (_React$Component) {
 }(react_default.a.Component);
 
 /* harmony default export */ var components_Home_Header = (Header_Header);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/toConsumableArray.js
+var toConsumableArray = __webpack_require__(41);
+var toConsumableArray_default = /*#__PURE__*/__webpack_require__.n(toConsumableArray);
+
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(27);
+var asyncToGenerator = __webpack_require__(25);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
@@ -569,15 +597,16 @@ var axios = __webpack_require__(20);
 var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
 // EXTERNAL MODULE: ./node_modules/react-infinite-scroll-component/dist/index.es.js
-var index_es = __webpack_require__(40);
+var index_es = __webpack_require__(42);
 
 // CONCATENATED MODULE: ./src/components/Home/HomeMain.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ var HomeMain = ({"home_box":"_1Ft1YqBm4dl6re7d7unyo2","loading":"_3Q7g-IU_3Qmh4thtZtC86w","project_box":"_1P4MTnEnsJnRvwAhJhsCwc","project_item":"QZauYb-w1p4IEsW0k0iSp","icon_box":"_1GZ1SAuWMWjxQ92_J2DjQZ"});
+/* harmony default export */ var Home_HomeMain = ({"home_box":"_1Ft1YqBm4dl6re7d7unyo2","loading":"_3Q7g-IU_3Qmh4thtZtC86w","project_box":"_1P4MTnEnsJnRvwAhJhsCwc","project_item":"QZauYb-w1p4IEsW0k0iSp","icon_box":"_1GZ1SAuWMWjxQ92_J2DjQZ"});
 // EXTERNAL MODULE: ./node_modules/lazysizes/lazysizes.js
-var lazysizes = __webpack_require__(74);
+var lazysizes = __webpack_require__(80);
 
 // CONCATENATED MODULE: ./src/components/Home/HomeMain.js
+
 
 
 
@@ -598,15 +627,15 @@ function HomeMain_isNativeReflectConstruct() { if (typeof Reflect === "undefined
 
  // 定义主要内容
 
-var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
-  inherits_default()(Main, _React$Component);
+var HomeMain_HomeMain = /*#__PURE__*/function (_React$Component) {
+  inherits_default()(HomeMain, _React$Component);
 
-  var _super = HomeMain_createSuper(Main);
+  var _super = HomeMain_createSuper(HomeMain);
 
-  function Main(props) {
+  function HomeMain(props) {
     var _this;
 
-    classCallCheck_default()(this, Main);
+    classCallCheck_default()(this, HomeMain);
 
     _this = _super.call(this, props);
 
@@ -616,13 +645,14 @@ var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
 
     defineProperty_default()(assertThisInitialized_default()(_this), "getData", /*#__PURE__*/function () {
       var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(param) {
-        var res, arr, newParam;
+        var _this$state, data, page, res, arr;
+
         return regenerator_default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                res = null;
-                _context.prev = 1;
+                _this$state = _this.state, data = _this$state.data, page = _this$state.page;
+                res = null; // 请求数据
 
                 if (!(param === "all")) {
                   _context.next = 8;
@@ -634,8 +664,14 @@ var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
                   url: "https://api.github.com/search/repositories?q=stars:%3E1&sort=stars&order=desc&type=Repositories",
                   params: {
                     per_page: 10,
-                    page: _this.state.all.pageNum
+                    page: page
                   }
+                })["catch"](function (error) {
+                  var err = error.response.data.message;
+
+                  _this.setState({
+                    err: err
+                  });
                 });
 
               case 5:
@@ -649,8 +685,14 @@ var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
                   url: "https://api.github.com/search/repositories?q=stars:%3E1+language:".concat(param, "&sort=stars&order=desc&type=Repositories"),
                   params: {
                     per_page: 10,
-                    page: _this.state[param].pageNum
+                    page: page
                   }
+                })["catch"](function (error) {
+                  var err = error.response.data.message;
+
+                  _this.setState({
+                    err: err
+                  });
                 });
 
               case 10:
@@ -686,35 +728,19 @@ var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
                   };
                   arr.push(obj);
                 });
-                newParam = {
-                  pageNum: _this.state[param].pageNum + 1,
-                  data: _this.state[param].data.concat(arr)
-                };
-                setTimeout(function () {
-                  var _this$setState;
 
-                  _this.setState((_this$setState = {}, defineProperty_default()(_this$setState, param, newParam), defineProperty_default()(_this$setState, "err", ""), _this$setState), function () {
-                    sessionStorage.setItem(param, JSON.stringify(newParam));
-                  });
-                }, 1500);
-                _context.next = 20;
-                break;
+                _this.setState({
+                  data: [].concat(toConsumableArray_default()(data), arr),
+                  page: page + 1,
+                  err: ""
+                });
 
-              case 17:
-                _context.prev = 17;
-                _context.t0 = _context["catch"](1);
-                setTimeout(function () {
-                  _this.setState({
-                    err: _context.t0
-                  });
-                }, 1500);
-
-              case 20:
+              case 14:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 17]]);
+        }, _callee);
       }));
 
       return function (_x) {
@@ -723,93 +749,92 @@ var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
     }());
 
     _this.state = {
-      all: {
-        pageNum: 1,
-        data: []
-      },
-      javascript: {
-        pageNum: 1,
-        data: []
-      },
-      ruby: {
-        pageNum: 1,
-        data: []
-      },
-      java: {
-        pageNum: 1,
-        data: []
-      },
-      css: {
-        pageNum: 1,
-        data: []
-      },
-      python: {
-        pageNum: 1,
-        data: []
-      },
-      err: ""
+      data: [],
+      page: 1,
+      param: '',
+      err: ''
     };
     return _this;
   }
 
-  createClass_default()(Main, [{
+  createClass_default()(HomeMain, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var param = this.props.location.pathname.split("/")[1]; // 先从sessionStorage中读取数据
+      var params = this.props.props.location.search;
+      var p = new URLSearchParams(params).get("language");
+      this.setState({
+        param: p
+      });
+      this.getData(p);
+    }
+  }, {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(newProps) {
+      var _this2 = this;
 
-      var data = sessionStorage.getItem(param);
+      var param = newProps.param;
 
-      if (data) {
-        this.setState(defineProperty_default()({}, param, JSON.parse(data)));
-      } else {
-        this.getData(param);
+      if (param !== this.state.param) {
+        this.setState({
+          data: [],
+          param: param,
+          page: 1
+        }, function () {
+          _this2.getData(param);
+        });
       }
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
+      var _this$state2 = this.state,
+          data = _this$state2.data,
+          param = _this$state2.param,
+          err = _this$state2.err;
       var msg = "Loading ...";
 
-      if (this.state.err !== "") {
-        msg = "数据请求失败，请刷新页面重试！";
+      if (err !== "") {
+        msg = '数据请求失败，请刷新页面重试！';
       } else {
         msg = "Loading ...";
       }
 
-      var param = this.props.location.pathname.split("/")[1];
       return /*#__PURE__*/react_default.a.createElement("div", {
-        className: "container ".concat(HomeMain.home_box)
+        className: "container ".concat(Home_HomeMain.home_box)
       }, /*#__PURE__*/react_default.a.createElement(index_es["a" /* default */], {
         style: {
           overflow: "unset"
         },
-        dataLength: this.state[param].data.length,
+        dataLength: data.length,
         next: function next() {
-          return _this2.getData(param);
+          return _this3.getData(param);
         },
         hasMore: true,
         loader: /*#__PURE__*/react_default.a.createElement("h4", {
-          className: HomeMain.loading
+          className: Home_HomeMain.loading,
+          style: {
+            color: err === "" ? '#000' : 'red'
+          }
         }, /*#__PURE__*/react_default.a.createElement("i", {
           className: "fa fa-spinner fa-spin",
           style: {
-            display: this.state.err === "" ? "inline-block" : "none"
+            display: err === "" ? "inline-block" : "none"
           }
-        }), " ", msg)
+        }), msg, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), err)
       }, /*#__PURE__*/react_default.a.createElement("ul", {
-        className: "row ".concat(HomeMain.project_box)
-      }, this.state[param].data.map(function (item, idx) {
+        className: "row ".concat(Home_HomeMain.project_box)
+      }, data.map(function (item, idx) {
         return /*#__PURE__*/react_default.a.createElement("li", {
-          className: "col-9 col-sm-6 col-md-4 col-lg-3 ".concat(HomeMain.project_item),
+          className: "col-9 col-sm-6 col-md-4 col-lg-3 ".concat(Home_HomeMain.project_item),
           key: idx
         }, /*#__PURE__*/react_default.a.createElement("h2", null, "#", idx + 1), /*#__PURE__*/react_default.a.createElement("img", {
           "data-src": item.url,
           alt: "",
           className: "lazyload"
         }), /*#__PURE__*/react_default.a.createElement("h3", null, item.name), /*#__PURE__*/react_default.a.createElement("ul", {
-          className: "fa-ul ".concat(HomeMain.icon_box)
+          className: "fa-ul ".concat(Home_HomeMain.icon_box)
         }, item.infos.map(function (info) {
           return /*#__PURE__*/react_default.a.createElement("li", {
             key: info.icon
@@ -824,11 +849,13 @@ var HomeMain_Main = /*#__PURE__*/function (_React$Component) {
     }
   }]);
 
-  return Main;
+  return HomeMain;
 }(react_default.a.Component);
 
-/* harmony default export */ var Home_HomeMain = (HomeMain_Main);
+/* harmony default export */ var components_Home_HomeMain = (HomeMain_HomeMain);
 // CONCATENATED MODULE: ./src/pages/Home.js
+
+
 
 
 
@@ -843,43 +870,46 @@ function Home_isNativeReflectConstruct() { if (typeof Reflect === "undefined" ||
 
 
 
-
 var Home_Home = /*#__PURE__*/function (_React$Component) {
   inherits_default()(Home, _React$Component);
 
   var _super = Home_createSuper(Home);
 
-  function Home() {
+  function Home(props) {
+    var _this;
+
     classCallCheck_default()(this, Home);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "getParam", function (param) {
+      _this.setState({
+        param: param
+      });
+
+      _this.props.history.push("/popular?language=".concat(param));
+    });
+
+    _this.state = {
+      param: 'all'
+    };
+    return _this;
   }
 
   createClass_default()(Home, [{
     key: "render",
     value: function render() {
+      var param = this.state.param;
       return /*#__PURE__*/react_default.a.createElement("div", {
         style: {
           flex: 1
         }
-      }, /*#__PURE__*/react_default.a.createElement(components_Home_Header, null), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/all",
-        component: Home_HomeMain
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/javascript",
-        component: Home_HomeMain
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/ruby",
-        component: Home_HomeMain
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/java",
-        component: Home_HomeMain
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/css",
-        component: Home_HomeMain
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/python",
-        component: Home_HomeMain
+      }, /*#__PURE__*/react_default.a.createElement(components_Home_Header, {
+        props: this.props,
+        onClick: this.getParam
+      }), /*#__PURE__*/react_default.a.createElement(components_Home_HomeMain, {
+        props: this.props,
+        param: param
       }));
     }
   }]);
@@ -906,10 +936,10 @@ function App_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || 
 
 
 var Battle = Object(loadable_esm["a" /* default */])(function () {
-  return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 77));
+  return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 83));
 });
 var Result = Object(loadable_esm["a" /* default */])(function () {
-  return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 76));
+  return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 82));
 });
 
 var App_App = /*#__PURE__*/function (_React$Component) {
@@ -926,7 +956,6 @@ var App_App = /*#__PURE__*/function (_React$Component) {
   createClass_default()(App, [{
     key: "render",
     value: function render() {
-      var url = window.location.href.split("#")[1];
       return /*#__PURE__*/react_default.a.createElement("div", {
         style: {
           height: "100%",
@@ -937,24 +966,9 @@ var App_App = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react_default.a.createElement(components_Common_Nav, null), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Switch */], null, /*#__PURE__*/react_default.a.createElement(react_router["a" /* Redirect */], {
         exact: true,
         from: "/",
-        to: url === "/" ? "/all" : url
+        to: "/popular?language=all"
       }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/all",
-        component: pages_Home
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/javascript",
-        component: pages_Home
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/ruby",
-        component: pages_Home
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/java",
-        component: pages_Home
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/css",
-        component: pages_Home
-      }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
-        path: "/python",
+        path: "/popular",
         component: pages_Home
       }), /*#__PURE__*/react_default.a.createElement(react_router["b" /* Route */], {
         exact: true,
@@ -986,4 +1000,4 @@ react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_rou
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.cbcb1f85.js.map
+//# sourceMappingURL=main.f48c910e.js.map

@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
-/***/ 76:
+/***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(27);
+var asyncToGenerator = __webpack_require__(25);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
@@ -19,7 +19,7 @@ var createClass = __webpack_require__(8);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(15);
+var assertThisInitialized = __webpack_require__(13);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inherits.js
@@ -51,7 +51,7 @@ var axios = __webpack_require__(20);
 var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/esm/react-router-dom.js
-var react_router_dom = __webpack_require__(13);
+var react_router_dom = __webpack_require__(15);
 
 // CONCATENATED MODULE: ./src/pages/Result.css
 // extracted by mini-css-extract-plugin
@@ -93,7 +93,8 @@ var Result_Result = /*#__PURE__*/function (_Component) {
     });
 
     _this.state = {
-      data: []
+      data: [],
+      err: ''
     };
     return _this;
   }
@@ -104,18 +105,29 @@ var Result_Result = /*#__PURE__*/function (_Component) {
       var _componentDidMount = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
         var _this2 = this;
 
-        var url, p1, p2, res, arr, s1, s2;
+        var url, s, p1, p2, res, arr, s1, s2;
         return regenerator_default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 url = this.props.location.search;
-                p1 = url.replace("?", "").split("&")[0].split("=")[1];
-                p2 = url.replace("?", "").split("&")[1].split("=")[1];
-                _context.next = 5;
-                return axios_default.a.all([axios_default.a.get("https://api.github.com/users/".concat(p1)), axios_default.a.get("https://api.github.com/users/".concat(p2))]);
+                console.log("url", url);
+                s = new URLSearchParams(url);
+                p1 = s.get('player1');
+                p2 = s.get('player2');
 
-              case 5:
+                if (p1 === null || p2 === null) {
+                  this.props.history.push('/battle');
+                }
+
+                _context.next = 8;
+                return axios_default.a.all([axios_default.a.get("https://api.github.com/users/".concat(p1)), axios_default.a.get("https://api.github.com/users/".concat(p2))])["catch"](function (err) {
+                  _this2.setState({
+                    err: err.response.data.message
+                  });
+                });
+
+              case 8:
                 res = _context.sent;
                 arr = [];
                 res.forEach(function (item) {
@@ -150,7 +162,7 @@ var Result_Result = /*#__PURE__*/function (_Component) {
                   });
                 }, 1000);
 
-              case 12:
+              case 15:
               case "end":
                 return _context.stop();
             }
@@ -167,7 +179,17 @@ var Result_Result = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var data = this.state.data;
+      var _this$state = this.state,
+          data = _this$state.data,
+          err = _this$state.err;
+
+      if (err !== "") {
+        return /*#__PURE__*/react_default.a.createElement("p", {
+          style: {
+            color: 'red'
+          }
+        }, "\u6570\u636E\u8BF7\u6C42\u5931\u8D25\uFF0C\u8BF7\u5237\u65B0\u91CD\u8BD5\uFF01", /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), err);
+      }
 
       if (data.length === 0) {
         return /*#__PURE__*/react_default.a.createElement("div", {
@@ -225,4 +247,4 @@ var Result_Result = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=3.26aaa432.js.map
+//# sourceMappingURL=3.efae5798.js.map

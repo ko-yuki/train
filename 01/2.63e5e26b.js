@@ -1,10 +1,14 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ 77:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__(25);
+var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
 var classCallCheck = __webpack_require__(7);
@@ -15,7 +19,7 @@ var createClass = __webpack_require__(8);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(15);
+var assertThisInitialized = __webpack_require__(13);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inherits.js
@@ -34,14 +38,24 @@ var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
 var defineProperty = __webpack_require__(14);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
+var regenerator = __webpack_require__(19);
+var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
+
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/axios/index.js
+var axios = __webpack_require__(20);
+var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
+
 // CONCATENATED MODULE: ./src/pages/Battle.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ var pages_Battle = ({"battle_box":"_2oei-2YOc-1wk8eBoE4vxM","ins":"_2q0N21pNPwtFAxM6H8Y44G","main":"_1d7T73OV7Vnwjy5oMNars","players_title":"_1FvAebSJ7RwX5vH53Swwz7","players":"_3STnNUIAzf4TG2f1Kc9vCW","players_btn":"_3WgYOGwghwTqcKnzqZD4sk","players_ok":"_1y0McyfKY9krZIBY0qs5ar","img_box":"_2t47ZTDZ29CZhwHSZOUfpy","close_btn":"_2bak_VkfhBzdTp_aumDk1m","ok_btn":"_1ulfl2W-rKs148ggYB55WC"});
+/* harmony default export */ var pages_Battle = ({"battle_box":"_2oei-2YOc-1wk8eBoE4vxM","ins":"_2q0N21pNPwtFAxM6H8Y44G","main":"_1d7T73OV7Vnwjy5oMNars","players_title":"_1FvAebSJ7RwX5vH53Swwz7","players":"_3STnNUIAzf4TG2f1Kc9vCW","players_btn":"_3WgYOGwghwTqcKnzqZD4sk","players_ok":"_1y0McyfKY9krZIBY0qs5ar","img_box":"_2t47ZTDZ29CZhwHSZOUfpy","close_btn":"_2bak_VkfhBzdTp_aumDk1m","ok_btn":"_1ulfl2W-rKs148ggYB55WC","error":"BcX5BF_0FLra867PieYXe"});
 // CONCATENATED MODULE: ./src/pages/Battle.js
+
+
 
 
 
@@ -53,6 +67,7 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = getPrototypeOf_default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf_default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn_default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -69,33 +84,111 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
 
-    defineProperty_default()(assertThisInitialized_default()(_this), "inputName", function (e) {
+    defineProperty_default()(assertThisInitialized_default()(_this), "inputName", function (e, index) {
       e.persist();
+
+      if (index === 0) {
+        _this.setState({
+          errOne: ''
+        });
+      } else {
+        _this.setState({
+          errTwo: ''
+        });
+      }
 
       _this.setState(defineProperty_default()({}, e.target.name, e.target.value));
     });
 
-    defineProperty_default()(assertThisInitialized_default()(_this), "getName", function (index) {
-      var _this$state = _this.state,
-          nameOne = _this$state.nameOne,
-          nameTwo = _this$state.nameTwo;
+    defineProperty_default()(assertThisInitialized_default()(_this), "getName", /*#__PURE__*/function () {
+      var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee(index) {
+        var _this$state, nameOne, nameTwo, loadingOne, loadingTwo, res, _res;
 
-      if (nameOne === "" && nameTwo === "") {
-        return;
-      }
+        return regenerator_default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this$state = _this.state, nameOne = _this$state.nameOne, nameTwo = _this$state.nameTwo, loadingOne = _this$state.loadingOne, loadingTwo = _this$state.loadingTwo;
 
-      if (index === 0) {
-        _this.setState({
-          urlOne: "https://github.com/".concat(nameOne, ".png?size=200"),
-          flagOne: true
-        });
-      } else {
-        _this.setState({
-          urlTwo: "https://github.com/".concat(nameTwo, ".png?size=200"),
-          flagTwo: true
-        });
-      }
-    });
+                if (!(nameOne === "" && nameTwo === "")) {
+                  _context.next = 3;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 3:
+                if (!(loadingOne || loadingTwo)) {
+                  _context.next = 5;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 5:
+                if (!(index === 0)) {
+                  _context.next = 13;
+                  break;
+                }
+
+                _this.setState({
+                  loadingOne: true
+                });
+
+                _context.next = 9;
+                return axios_default()("/app/".concat(nameOne, ".png?size=200"))["catch"](function (err) {
+                  _this.setState({
+                    errOne: err.response.data,
+                    loadingOne: false
+                  });
+                });
+
+              case 9:
+                res = _context.sent;
+
+                _this.setState({
+                  urlOne: res.request.responseURL,
+                  flagOne: true,
+                  loadingOne: false
+                });
+
+                _context.next = 18;
+                break;
+
+              case 13:
+                _this.setState({
+                  loadingTwo: true
+                });
+
+                _context.next = 16;
+                return axios_default()("/app/".concat(nameTwo, ".png?size=200"))["catch"](function (err) {
+                  _this.setState({
+                    errTwo: err.response.data,
+                    loadingTwo: false
+                  });
+                });
+
+              case 16:
+                _res = _context.sent;
+
+                _this.setState({
+                  urlTwo: _res.request.responseURL,
+                  flagTwo: true,
+                  loadingTwo: false
+                });
+
+              case 18:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }());
 
     defineProperty_default()(assertThisInitialized_default()(_this), "enterName", function (e, index) {
       e.persist();
@@ -151,7 +244,11 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
       urlOne: "",
       urlTwo: "",
       flagOne: false,
-      flagTwo: false
+      flagTwo: false,
+      loadingOne: false,
+      loadingTwo: false,
+      errOne: '',
+      errTwo: ''
     };
     return _this;
   }
@@ -168,7 +265,11 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           urlOne = _this$state3.urlOne,
           urlTwo = _this$state3.urlTwo,
           flagOne = _this$state3.flagOne,
-          flagTwo = _this$state3.flagTwo;
+          flagTwo = _this$state3.flagTwo,
+          loadingOne = _this$state3.loadingOne,
+          loadingTwo = _this$state3.loadingTwo,
+          errOne = _this$state3.errOne,
+          errTwo = _this$state3.errTwo;
       return /*#__PURE__*/react_default.a.createElement("div", {
         id: "test",
         className: "container ".concat(pages_Battle.battle_box)
@@ -207,18 +308,36 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         },
         name: "nameOne",
         value: nameOne,
-        onChange: this.inputName,
+        onChange: function onChange(e) {
+          return _this2.inputName(e, 0);
+        },
         onKeyDown: function onKeyDown(e) {
           return _this2.enterName(e, 0);
         }
       }), /*#__PURE__*/react_default.a.createElement("button", {
         className: pages_Battle.players_btn,
+        style: {
+          opacity: loadingOne ? '0.6' : '1',
+          color: loadingOne ? '#000' : '',
+          cursor: loadingOne ? 'not-allowed' : 'pointer'
+        },
         type: "button",
         disabled: !nameOne.length,
         onClick: function onClick() {
           return _this2.getName(0);
         }
-      }, "Submit")), /*#__PURE__*/react_default.a.createElement("div", {
+      }, loadingOne ? /*#__PURE__*/react_default.a.createElement("p", {
+        style: {
+          margin: 0
+        }
+      }, /*#__PURE__*/react_default.a.createElement("i", {
+        className: "fa fa-spinner fa-spin"
+      }), "loading...") : 'Submit'), /*#__PURE__*/react_default.a.createElement("p", {
+        style: {
+          display: errOne === '' ? 'none' : 'block'
+        },
+        className: pages_Battle.error
+      }, "\u8F93\u5165\u7684\u7528\u6237\u4E0D\u5B58\u5728\uFF0C\u8BF7\u91CD\u65B0\u8F93\u5165\uFF01")), /*#__PURE__*/react_default.a.createElement("div", {
         className: pages_Battle.players_ok,
         style: {
           display: flagOne ? "flex" : "none"
@@ -251,18 +370,36 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         placeholder: "github username",
         name: "nameTwo",
         value: nameTwo,
-        onChange: this.inputName,
+        onChange: function onChange(e) {
+          return _this2.inputName(e, 1);
+        },
         onKeyDown: function onKeyDown(e) {
           return _this2.enterName(e, 1);
         }
       }), /*#__PURE__*/react_default.a.createElement("button", {
         className: pages_Battle.players_btn,
+        style: {
+          opacity: loadingTwo ? '0.6' : '1',
+          color: loadingTwo ? '#000' : '',
+          cursor: loadingTwo ? 'not-allowed' : 'pointer'
+        },
         type: "button",
         disabled: !nameTwo.length,
         onClick: function onClick() {
           return _this2.getName(1);
         }
-      }, "Submit")), /*#__PURE__*/react_default.a.createElement("div", {
+      }, loadingTwo ? /*#__PURE__*/react_default.a.createElement("p", {
+        style: {
+          margin: 0
+        }
+      }, /*#__PURE__*/react_default.a.createElement("i", {
+        className: "fa fa-spinner fa-spin"
+      }), "loading...") : 'Submit'), /*#__PURE__*/react_default.a.createElement("p", {
+        style: {
+          display: errTwo === '' ? 'none' : 'block'
+        },
+        className: pages_Battle.error
+      }, "\u8F93\u5165\u7684\u7528\u6237\u4E0D\u5B58\u5728\uFF0C\u8BF7\u91CD\u65B0\u8F93\u5165\uFF01")), /*#__PURE__*/react_default.a.createElement("div", {
         className: pages_Battle.players_ok,
         style: {
           display: flagTwo ? "flex" : "none"
@@ -299,4 +436,4 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=2.b3b9384a.js.map
+//# sourceMappingURL=2.63e5e26b.js.map
