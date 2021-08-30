@@ -136,7 +136,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                 });
 
                 _context.next = 9;
-                return axios_default()("/app/".concat(nameOne, ".png?size=200"))["catch"](function (err) {
+                return axios_default()("https://api.github.com/users/".concat(nameOne, "?size=200"))["catch"](function (err) {
                   _this.setState({
                     errOne: err.response.data,
                     loadingOne: false
@@ -147,7 +147,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                 res = _context.sent;
 
                 _this.setState({
-                  urlOne: res.request.responseURL,
+                  urlOne: res.data.avatar_url,
                   flagOne: true,
                   loadingOne: false
                 });
@@ -161,7 +161,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                 });
 
                 _context.next = 16;
-                return axios_default()("/app/".concat(nameTwo, ".png?size=200"))["catch"](function (err) {
+                return axios_default()("https://api.github.com/users/".concat(nameTwo, "?size=200"))["catch"](function (err) {
                   _this.setState({
                     errTwo: err.response.data,
                     loadingTwo: false
@@ -172,7 +172,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                 _res = _context.sent;
 
                 _this.setState({
-                  urlTwo: _res.request.responseURL,
+                  urlTwo: _res.data.avatar_url,
                   flagTwo: true,
                   loadingTwo: false
                 });
@@ -436,4 +436,4 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=2.ac72a18e.js.map
+//# sourceMappingURL=2.1e1d7b5a.js.map
