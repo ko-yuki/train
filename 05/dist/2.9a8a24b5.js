@@ -137,8 +137,20 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 
                 _context.next = 9;
                 return axios_default()("https://api.github.com/users/".concat(nameOne, "?size=200"))["catch"](function (err) {
+                  var status = err.response.status;
+                  var message = err.response.data.message;
+
+                  if (status === 404) {
+                    _this.setState({
+                      errOne: message
+                    });
+                  } else if (status === 403) {
+                    _this.setState({
+                      errOne: '请求繁忙，请稍后再试或刷新页面！'
+                    });
+                  }
+
                   _this.setState({
-                    errOne: err.response.data,
                     loadingOne: false
                   });
                 });
@@ -161,8 +173,20 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 
                 _context.next = 16;
                 return axios_default()("https://api.github.com/users/".concat(nameTwo, "?size=200"))["catch"](function (err) {
+                  var status = err.response.status;
+                  var message = err.response.data.message;
+
+                  if (status === 404) {
+                    _this.setState({
+                      errTwo: message
+                    });
+                  } else if (status === 403) {
+                    _this.setState({
+                      errTwo: '请求繁忙，请稍后再试或刷新页面！'
+                    });
+                  }
+
                   _this.setState({
-                    errTwo: err.response.data,
                     loadingTwo: false
                   });
                 });
@@ -347,7 +371,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           display: errOne === '' ? 'none' : 'block'
         },
         className: pages_Battle.error
-      }, "\u8F93\u5165\u7684\u7528\u6237\u4E0D\u5B58\u5728\uFF0C\u8BF7\u91CD\u65B0\u8F93\u5165\uFF01")), /*#__PURE__*/react_default.a.createElement("div", {
+      }, errOne)), /*#__PURE__*/react_default.a.createElement("div", {
         className: pages_Battle.players_ok,
         style: {
           display: flagOne ? "flex" : "none"
@@ -421,7 +445,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           display: errTwo === '' ? 'none' : 'block'
         },
         className: pages_Battle.error
-      }, "\u8F93\u5165\u7684\u7528\u6237\u4E0D\u5B58\u5728\uFF0C\u8BF7\u91CD\u65B0\u8F93\u5165\uFF01")), /*#__PURE__*/react_default.a.createElement("div", {
+      }, errTwo)), /*#__PURE__*/react_default.a.createElement("div", {
         className: pages_Battle.players_ok,
         style: {
           display: flagTwo ? "flex" : "none"
@@ -470,4 +494,4 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=2.1176a526.js.map
+//# sourceMappingURL=2.9a8a24b5.js.map
