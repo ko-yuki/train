@@ -145,7 +145,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         });
       } else {
         _this.setState({
-          errOne: ""
+          errTwo: ""
         });
       }
 
@@ -546,4 +546,4 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=2.39f7ef30.js.map
+//# sourceMappingURL=2.b39a073e.js.map
