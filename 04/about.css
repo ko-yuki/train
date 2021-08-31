@@ -18,7 +18,8 @@ html, .a-body {
 .wrapper.about-box {
     display: flex;
     justify-content: space-between;
-    margin: 6% auto;
+    height: 88%;
+    align-items: center;
 }
 #map {
     height: 300px;

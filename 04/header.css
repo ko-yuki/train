@@ -22,9 +22,6 @@ nav a {
 nav a.actived {
     color:#F81A57;
 }
-.connect {
-    color: black !important;
-}
 nav a:hover {
     color: #F81A57;
 }
