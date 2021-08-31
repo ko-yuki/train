@@ -5,7 +5,6 @@
 }
 .footer-box>.wrapper,
 .footer-box ul {
-    width: 90%;
     display: flex;
 }
 .footer-box>.wrapper {
