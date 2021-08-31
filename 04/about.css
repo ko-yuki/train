@@ -18,10 +18,10 @@ html, .a-body {
 .wrapper.about-box {
     display: flex;
     justify-content: space-between;
-    margin: 2% auto;
+    margin: 6% auto;
 }
 #map {
-    height: 283px;
+    height: 300px;
     background-color: #666;
     margin: 0 auto;
 }

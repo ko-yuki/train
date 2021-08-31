@@ -85,6 +85,9 @@
                 $("nav a").eq(i).addClass("actived");
                 $("nav a").not($("nav a").eq(i)).addClass("");
             }
+            if(url.indexOf('news.html')!==-1){
+                $('nav a').eq(1).addClass('actived');
+            }
         }
     })
 </script>
