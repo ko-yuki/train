@@ -1,33 +1,66 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ 83:
+/***/ 88:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "._3fyTbQ1zSQnQWcofn2Dtfe {\n  flex: 1;\n  margin-top: 2%;\n}\n._3MLBCHnT_Gzqf-axylbtyK {\n  text-align: center;\n  margin-bottom: 2%;\n}\n._2ECjDcQG2tIze5672KOKDv {\n  justify-content: center;\n}\n._2ECjDcQG2tIze5672KOKDv li {\n  text-align: center;\n}\n._2ECjDcQG2tIze5672KOKDv li h4 {\n  font-size: 20px;\n}\n._2ECjDcQG2tIze5672KOKDv li i {\n  padding: 14%;\n  background-color: #eee;\n  width: 70%;\n}\n._3BLhCeRLBZDbyBz7wM0ChG {\n  text-align: center;\n  margin: 4% 0 2%;\n}\n._9PBpVkbzW2-NeTL0tQy5n {\n  text-indent: 5%;\n  width: 68%;\n  padding: 1% 0;\n}\n.XU9EqAJtSm4S14P7AaUtX {\n  width: 30%;\n  padding: 1% 0;\n  margin-left: 2%;\n}\n._38kDMXq_ywkR2_LZWSQoLC {\n  align-items: center;\n  justify-content: space-between;\n  padding: 4%;\n  background-color: #eeeeee;\n  border-radius: 4px;\n}\n._2bacthfjU8LOJ-ZHf4nJWn {\n  width: 100%;\n}\n._2bacthfjU8LOJ-ZHf4nJWn img {\n  width: 50px;\n  height: 50px;\n  margin-right: 2%;\n  display: inline-block;\n}\n._2bacthfjU8LOJ-ZHf4nJWn span {\n  color: #1890ff;\n  font-size: 32px;\n  vertical-align: middle;\n}\n._2bacthfjU8LOJ-ZHf4nJWn p {\n  margin: 0;\n  color: #1890ff;\n  margin-right: 2%;\n  text-align: center;\n  line-height: 50px;\n}\n._1nS9bBBTz6K3lXb7kS8BAn {\n  border: 0;\n}\n._1nS9bBBTz6K3lXb7kS8BAn i {\n  color: red;\n}\n._21_PCWR41hZyjWn7zADRCM {\n  margin: 2% auto;\n  padding: 1% 2%;\n  border-radius: 5px;\n}\n.bsXautZiB9tI2nHKltNV8 {\n  text-indent: 1em;\n  padding-top: 5px;\n  color: red;\n}\n", "",{"version":3,"sources":["webpack://./src/pages/Battle.less"],"names":[],"mappings":"AAAA;EACI,OAAA;EACA,cAAA;AACJ;AACA;EACI,kBAAA;EACA,iBAAA;AACJ;AACA;EACI,uBAAA;AACJ;AAFA;EAGQ,kBAAA;AAER;AALA;EAKY,eAAA;AAGZ;AARA;EAQY,YAAA;EACA,sBAAA;EACA,UAAA;AAGZ;AACA;EACI,kBAAA;EACA,eAAA;AACJ;AACA;EACI,eAAA;EACA,UAAA;EACA,aAAA;AACJ;AACA;EACI,UAAA;EACA,aAAA;EACA,eAAA;AACJ;AACA;EACI,mBAAA;EACA,8BAAA;EACA,WAAA;EACA,yBAAA;EACA,kBAAA;AACJ;AACA;EACI,WAAA;AACJ;AAFA;EAIQ,WAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;AACR;AARA;EAUQ,cAAA;EACA,eAAA;EACA,sBAAA;AACR;AAbA;EAeQ,SAAA;EACA,cAAA;EACA,gBAAA;EACA,kBAAA;EACA,iBAAA;AACR;AAGA;EACI,SAAA;AADJ;AAAA;EAGQ,UAAA;AAAR;AAGA;EACI,eAAA;EACA,cAAA;EACA,kBAAA;AADJ;AAGA;EACI,gBAAA;EACA,gBAAA;EACA,UAAA;AADJ","sourcesContent":[".battle_box {\n    flex: 1;\n    margin-top: 2%;\n}\n.ins {\n    text-align: center;\n    margin-bottom: 2%;\n}\n.main {\n    justify-content: center;\n    li {\n        text-align: center;\n        h4 {\n            font-size: 20px;\n        }\n        i {\n            padding: 14%;\n            background-color: #eee;\n            width: 70%;\n        }\n    }\n}\n.players_title {\n    text-align: center;\n    margin: 4% 0 2%;\n}\n.players {\n    text-indent: 5%;\n    width: 68%;\n    padding: 1% 0;\n}\n.players_btn {\n    width: 30%;\n    padding: 1% 0;\n    margin-left: 2%;\n}\n.players_ok {\n    align-items: center;\n    justify-content: space-between;\n    padding: 4%;\n    background-color: rgb(238, 238, 238);\n    border-radius: 4px;\n}\n.img_box {\n    width: 100%;\n    @loadingcolor:#1890ff;\n    img {\n        width: 50px;\n        height: 50px;\n        margin-right: 2%;\n        display: inline-block;\n    }\n    span {\n        color: @loadingcolor;\n        font-size: 32px;\n        vertical-align: middle;\n    }\n    p {\n        margin: 0;\n        color: @loadingcolor;\n        margin-right: 2%;\n        text-align: center;\n        line-height: 50px;\n    }\n}\n@closecolor:red;\n.close_btn {\n    border: 0;\n    i {\n        color: @closecolor;\n    }\n}\n.ok_btn {\n    margin: 2% auto;\n    padding: 1% 2%;\n    border-radius: 5px;\n}\n.error {\n    text-indent: 1em;\n    padding-top: 5px;\n    color: @closecolor;\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"battle_box": "_3fyTbQ1zSQnQWcofn2Dtfe",
+	"ins": "_3MLBCHnT_Gzqf-axylbtyK",
+	"main": "_2ECjDcQG2tIze5672KOKDv",
+	"players_title": "_3BLhCeRLBZDbyBz7wM0ChG",
+	"players": "_9PBpVkbzW2-NeTL0tQy5n",
+	"players_btn": "XU9EqAJtSm4S14P7AaUtX",
+	"players_ok": "_38kDMXq_ywkR2_LZWSQoLC",
+	"img_box": "_2bacthfjU8LOJ-ZHf4nJWn",
+	"close_btn": "_1nS9bBBTz6K3lXb7kS8BAn",
+	"ok_btn": "_21_PCWR41hZyjWn7zADRCM",
+	"error": "bsXautZiB9tI2nHKltNV8"
+};
+/* harmony default export */ __webpack_exports__["a"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 91:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js
-var asyncToGenerator = __webpack_require__(25);
+var asyncToGenerator = __webpack_require__(34);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(7);
+var classCallCheck = __webpack_require__(10);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/createClass.js
-var createClass = __webpack_require__(8);
+var createClass = __webpack_require__(11);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(13);
+var assertThisInitialized = __webpack_require__(16);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inherits.js
-var inherits = __webpack_require__(9);
+var inherits = __webpack_require__(12);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js
-var possibleConstructorReturn = __webpack_require__(10);
+var possibleConstructorReturn = __webpack_require__(13);
 var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/getPrototypeOf.js
@@ -35,11 +68,11 @@ var getPrototypeOf = __webpack_require__(3);
 var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js
-var defineProperty = __webpack_require__(14);
+var defineProperty = __webpack_require__(17);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
-var regenerator = __webpack_require__(19);
+var regenerator = __webpack_require__(22);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -47,12 +80,30 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/axios/index.js
-var axios = __webpack_require__(20);
+var axios = __webpack_require__(23);
 var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
-// CONCATENATED MODULE: ./src/pages/Battle.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ var pages_Battle = ({"battle_box":"_2oei-2YOc-1wk8eBoE4vxM","ins":"_2q0N21pNPwtFAxM6H8Y44G","main":"_1d7T73OV7Vnwjy5oMNars","players_title":"_1FvAebSJ7RwX5vH53Swwz7","players":"_3STnNUIAzf4TG2f1Kc9vCW","players_btn":"_3WgYOGwghwTqcKnzqZD4sk","players_ok":"_1y0McyfKY9krZIBY0qs5ar","img_box":"_2t47ZTDZ29CZhwHSZOUfpy","close_btn":"_2bak_VkfhBzdTp_aumDk1m","ok_btn":"_1ulfl2W-rKs148ggYB55WC","error":"BcX5BF_0FLra867PieYXe"});
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(5);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js?modules!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/pages/Battle.less
+var pages_Battle = __webpack_require__(88);
+
+// CONCATENATED MODULE: ./src/pages/Battle.less
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = injectStylesIntoStyleTag_default()(pages_Battle["a" /* default */], options);
+
+
+
+/* harmony default export */ var src_pages_Battle = (pages_Battle["a" /* default */].locals || {});
 // CONCATENATED MODULE: ./src/pages/Battle.js
 
 
@@ -89,11 +140,11 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
 
       if (index === 0) {
         _this.setState({
-          errOne: ''
+          errOne: ""
         });
       } else {
         _this.setState({
-          errOne: ''
+          errOne: ""
         });
       }
 
@@ -146,7 +197,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                     });
                   } else if (status === 403) {
                     _this.setState({
-                      errOne: '请求繁忙，请稍后再试或刷新页面！'
+                      errOne: "请求繁忙，请稍后再试或刷新页面！"
                     });
                   }
 
@@ -182,7 +233,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
                     });
                   } else if (status === 403) {
                     _this.setState({
-                      errTwo: '请求繁忙，请稍后再试或刷新页面！'
+                      errTwo: "请求繁忙，请稍后再试或刷新页面！"
                     });
                   }
 
@@ -281,8 +332,8 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
       flagTwo: false,
       loadingOne: false,
       loadingTwo: false,
-      errOne: '',
-      errTwo: ''
+      errOne: "",
+      errTwo: ""
     };
     return _this;
   }
@@ -306,11 +357,11 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           errTwo = _this$state3.errTwo;
       return /*#__PURE__*/react_default.a.createElement("div", {
         id: "test",
-        className: "container ".concat(pages_Battle.battle_box)
+        className: "container ".concat(src_pages_Battle.battle_box)
       }, /*#__PURE__*/react_default.a.createElement("h3", {
-        className: pages_Battle.ins
+        className: src_pages_Battle.ins
       }, "Instructions"), /*#__PURE__*/react_default.a.createElement("ul", {
-        className: "row ".concat(pages_Battle.main)
+        className: "row ".concat(src_pages_Battle.main)
       }, roles.map(function (role) {
         return /*#__PURE__*/react_default.a.createElement("li", {
           key: role.icon,
@@ -322,7 +373,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           }
         }));
       })), /*#__PURE__*/react_default.a.createElement("h3", {
-        className: pages_Battle.players_title
+        className: src_pages_Battle.players_title
       }, "Players"), /*#__PURE__*/react_default.a.createElement("ul", {
         className: "row"
       }, /*#__PURE__*/react_default.a.createElement("li", {
@@ -333,7 +384,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        className: pages_Battle.players,
+        className: src_pages_Battle.players,
         placeholder: "github username",
         style: {
           textIndent: "5%",
@@ -349,11 +400,11 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           return _this2.enterName(e, 0);
         }
       }), /*#__PURE__*/react_default.a.createElement("button", {
-        className: pages_Battle.players_btn,
+        className: src_pages_Battle.players_btn,
         style: {
-          opacity: loadingOne ? '0.6' : '1',
-          color: loadingOne ? '#000' : '',
-          cursor: loadingOne ? 'not-allowed' : 'pointer'
+          opacity: loadingOne ? "0.6" : "1",
+          color: loadingOne ? "#000" : "",
+          cursor: loadingOne ? "not-allowed" : "pointer"
         },
         type: "button",
         disabled: !nameOne.length,
@@ -366,24 +417,24 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react_default.a.createElement("i", {
         className: "fa fa-spinner fa-spin"
-      }), "loading...") : 'Submit'), /*#__PURE__*/react_default.a.createElement("p", {
+      }), "loading...") : "Submit"), /*#__PURE__*/react_default.a.createElement("p", {
         style: {
-          display: errOne === '' ? 'none' : 'block'
+          display: errOne === "" ? "none" : "block"
         },
-        className: pages_Battle.error
+        className: src_pages_Battle.error
       }, errOne)), /*#__PURE__*/react_default.a.createElement("div", {
-        className: pages_Battle.players_ok,
+        className: src_pages_Battle.players_ok,
         style: {
           display: flagOne ? "flex" : "none"
         }
       }, /*#__PURE__*/react_default.a.createElement("div", {
-        className: pages_Battle.img_box,
+        className: src_pages_Battle.img_box,
         style: {
           width: "100%"
         }
       }, /*#__PURE__*/react_default.a.createElement("p", {
         style: {
-          display: loadingOne ? 'inline-block' : 'none'
+          display: loadingOne ? "inline-block" : "none"
         }
       }, /*#__PURE__*/react_default.a.createElement("i", {
         className: "fa fa-spinner fa-spin"
@@ -394,10 +445,10 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         src: urlOne,
         alt: "",
         style: {
-          display: loadingOne ? 'none' : 'inline-block'
+          display: loadingOne ? "none" : "inline-block"
         }
       }), /*#__PURE__*/react_default.a.createElement("span", null, nameOne)), /*#__PURE__*/react_default.a.createElement("button", {
-        className: pages_Battle.close_btn,
+        className: src_pages_Battle.close_btn,
         type: "button",
         onClick: function onClick() {
           return _this2.close(0);
@@ -412,7 +463,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        className: pages_Battle.players,
+        className: src_pages_Battle.players,
         placeholder: "github username",
         name: "nameTwo",
         value: nameTwo,
@@ -423,11 +474,11 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
           return _this2.enterName(e, 1);
         }
       }), /*#__PURE__*/react_default.a.createElement("button", {
-        className: pages_Battle.players_btn,
+        className: src_pages_Battle.players_btn,
         style: {
-          opacity: loadingTwo ? '0.6' : '1',
-          color: loadingTwo ? '#000' : '',
-          cursor: loadingTwo ? 'not-allowed' : 'pointer'
+          opacity: loadingTwo ? "0.6" : "1",
+          color: loadingTwo ? "#000" : "",
+          cursor: loadingTwo ? "not-allowed" : "pointer"
         },
         type: "button",
         disabled: !nameTwo.length,
@@ -440,21 +491,21 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/react_default.a.createElement("i", {
         className: "fa fa-spinner fa-spin"
-      }), "loading...") : 'Submit'), /*#__PURE__*/react_default.a.createElement("p", {
+      }), "loading...") : "Submit"), /*#__PURE__*/react_default.a.createElement("p", {
         style: {
-          display: errTwo === '' ? 'none' : 'block'
+          display: errTwo === "" ? "none" : "block"
         },
-        className: pages_Battle.error
+        className: src_pages_Battle.error
       }, errTwo)), /*#__PURE__*/react_default.a.createElement("div", {
-        className: pages_Battle.players_ok,
+        className: src_pages_Battle.players_ok,
         style: {
           display: flagTwo ? "flex" : "none"
         }
       }, /*#__PURE__*/react_default.a.createElement("div", {
-        className: pages_Battle.img_box
+        className: src_pages_Battle.img_box
       }, /*#__PURE__*/react_default.a.createElement("p", {
         style: {
-          display: loadingTwo ? 'inline-block' : 'none'
+          display: loadingTwo ? "inline-block" : "none"
         }
       }, /*#__PURE__*/react_default.a.createElement("i", {
         className: "fa fa-spinner fa-spin"
@@ -465,10 +516,10 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         src: urlTwo,
         alt: "",
         style: {
-          display: loadingTwo ? 'none' : 'inline-block'
+          display: loadingTwo ? "none" : "inline-block"
         }
       }), /*#__PURE__*/react_default.a.createElement("span", null, nameTwo)), /*#__PURE__*/react_default.a.createElement("button", {
-        className: pages_Battle.close_btn,
+        className: src_pages_Battle.close_btn,
         type: "button",
         onClick: function onClick() {
           return _this2.close(1);
@@ -477,7 +528,7 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
         className: "fa fa-times-circle fa-3x"
       }))))), /*#__PURE__*/react_default.a.createElement("button", {
         type: "button",
-        className: pages_Battle.ok_btn,
+        className: src_pages_Battle.ok_btn,
         style: {
           display: flagOne && flagTwo ? "block" : "none"
         },
@@ -489,9 +540,9 @@ var Battle_Battle = /*#__PURE__*/function (_Component) {
   return Battle;
 }(react["Component"]);
 
-/* harmony default export */ var src_pages_Battle = __webpack_exports__["default"] = (Battle_Battle);
+/* harmony default export */ var src_pages_Battle_0 = __webpack_exports__["default"] = (Battle_Battle);
 
 /***/ })
 
 }]);
-//# sourceMappingURL=2.9a8a24b5.js.map
+//# sourceMappingURL=2.16ec87d7.js.map
