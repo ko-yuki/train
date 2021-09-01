@@ -77,13 +77,15 @@ function changeStyle(page){
         $(".prev button").prop("disabled",true);
         $(".next button").css({
             cursor:"pointer",
-            opacity:1
+            opacity:1,
+            color:"#000"
         });
         $(".next button").prop("disabled",false);
     }else if(page == len){
         $(".prev button").css({
             cursor:"pointer",
-            opacity:1
+            opacity:1,
+            color:"#000"
         });
         $(".prev button").prop("disabled",false);
         $(".next button").css({
@@ -94,11 +96,13 @@ function changeStyle(page){
     }else{
         $(".prev button").css({
             cursor:"pointer",
-            opacity:1
+            opacity:1,
+            color:"#000"
         });
         $(".next button").css({
             cursor:"pointer",
-            opacity:1
+            opacity:1,
+            color:"#000"
         }); 
     }
 }
