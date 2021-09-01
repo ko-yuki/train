@@ -39,7 +39,6 @@ div.about-info {
     color: #4e4e4e;
 }
 .about-info p:hover {
-    color: #E10000;
     cursor: pointer;
 }
 .about-info li {
@@ -66,5 +65,10 @@ div.about-info {
 @media (max-width:1200px) {
     #map {
         margin-bottom: 20px;
+    }
+}
+@media (max-width:768px) {
+    .wrapper.about-box {
+        margin: 2% auto;
     }
 }
